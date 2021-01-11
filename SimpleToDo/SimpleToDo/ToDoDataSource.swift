@@ -28,8 +28,11 @@ class ToDoDataSource: NSObject, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-    let list = self.model.getList(at: indexPath.section)
-    cell.textLabel?.text = list[indexPath.row].title
+    var todo = self.model.find(by: indexPath)
+    if todo.isCompleted {
+      todo.title = "✔️" + todo.title
+    }
+    cell.textLabel?.text = todo.title
     cell.accessoryType = .detailDisclosureButton
     return cell
   }
