@@ -19,6 +19,7 @@ class ViewController: UIViewController {
   }()
 
   lazy var addOrUpdateButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addToDo))
+  lazy var removeButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(removeToDo))
 
   var todoList: ToDoList = defaultData {
     didSet {
@@ -27,12 +28,14 @@ class ViewController: UIViewController {
     }
   }
 
+  var selectedIndexes: [IndexPath] = []
+
   override func viewDidLoad() {
     super.viewDidLoad()
     super.view.backgroundColor = .white
     super.title = "ToDo Items"
     super.navigationItem.leftBarButtonItem = editButtonItem
-    super.navigationItem.rightBarButtonItem = self.addOrUpdateButton
+    super.navigationItem.rightBarButtonItems = [self.addOrUpdateButton, self.removeButton]
     self.settingTable()
     self.setupTableView()
   }
@@ -41,6 +44,7 @@ class ViewController: UIViewController {
     self.tableView.dataSource = self.dataSource
     self.tableView.delegate = self
     self.tableView.register(ToDoTableViewCell.self, forCellReuseIdentifier: cellId)
+    self.tableView.allowsMultipleSelectionDuringEditing = true
     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
       self?.todoList = defaultData
     })
@@ -66,16 +70,47 @@ class ViewController: UIViewController {
     super.navigationController?.pushViewController(nextViewController , animated: true)
   }
 
+  @objc func removeToDo() {
+    if self.selectedIndexes.count > 0 {
+      for indexPath in self.selectedIndexes {
+        self.todoList.remove(at: indexPath)
+      }
+      self.selectedIndexes.removeAll()
+    }
+  }
+
 }
 
 
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if self.tableView.isEditing {
+      self.selectedIndexes.append(indexPath)
+    } else {
+      var todo: ToDo = self.todoList.remove(at: indexPath)
+      todo.isCompleted = !todo.isCompleted
+      self.todoList.insert(at: indexPath, with: todo)
+    }
+  }
+
+  func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    if self.tableView.isEditing {
+      self.selectedIndexes.removeAll(where: { $0.section == indexPath.section && $0.row == indexPath.row})
+    }
+  }
+
+  override func setEditing(_ editing: Bool, animated: Bool) {
+    super.setEditing(editing, animated: animated)
+    self.tableView.isEditing = editing
+  }
+
+  func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
     let nextViewController = ToDoMutationViewController()
     nextViewController.todo = self.todoList.find(by: indexPath)
     nextViewController.delegate = self
     super.navigationController?.pushViewController(nextViewController , animated: true)
   }
+
 }
 
 extension ViewController: ToDoMutationDelegate {

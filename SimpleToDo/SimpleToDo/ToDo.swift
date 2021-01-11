@@ -42,12 +42,41 @@ struct ToDoList {
     return list[path.row]
   }
 
+  @discardableResult
+  mutating func remove(at path: IndexPath) -> ToDo {
+    return {
+      switch path.section {
+      case 0:
+        return highPriorities.remove(at: path.row)
+      case 1:
+        return mediumPriorities.remove(at: path.row)
+      case 2:
+        return lowPriorities.remove(at: path.row)
+      default:
+        return highPriorities.remove(at: path.row)
+      }
+    }()
+  }
+
+  mutating func insert(at path: IndexPath, with todo: ToDo) {
+    switch path.section {
+    case 0:
+      highPriorities.insert(todo, at: path.row)
+    case 1:
+      mediumPriorities.insert(todo, at: path.row)
+    case 2:
+      lowPriorities.insert(todo, at: path.row)
+    default:
+      highPriorities.insert(todo, at: path.row)
+    }
+  }
+
 }
 
 let defaultData: ToDoList = {
-  let highPriorities = [ToDo(title: "hoge", priority: 1, isCompleted: false)]
-  let mediumPriorities = [ToDo(title: "fuga", priority: 2, isCompleted: false)]
-  let lowPriorities = [ToDo(title: "piyo", priority: 3, isCompleted: false)]
+  let highPriorities = [ToDo(title: "Find Job", priority: 1, isCompleted: false)]
+  let mediumPriorities = [ToDo(title: "Study about Swift", priority: 2, isCompleted: false)]
+  let lowPriorities = [ToDo(title: "Prepare to Move", priority: 3, isCompleted: false)]
   let todoList = ToDoList(highPriorities: highPriorities, mediumPriorities: mediumPriorities, lowPriorities: lowPriorities)
   return todoList
 }()

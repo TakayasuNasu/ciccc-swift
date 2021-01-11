@@ -30,11 +30,21 @@ class ToDoDataSource: NSObject, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
     let list = self.model.getList(at: indexPath.section)
     cell.textLabel?.text = list[indexPath.row].title
+    cell.accessoryType = .detailDisclosureButton
     return cell
   }
 
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     self.headers[section]
+  }
+
+  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+
+  func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    let todo: ToDo = self.model.remove(at: sourceIndexPath)
+    self.model.insert(at: destinationIndexPath, with: todo)
   }
 
 
