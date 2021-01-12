@@ -29,6 +29,7 @@ class ViewController: UIViewController {
   }
 
   var selectedIndexes: [IndexPath] = []
+  var selectedIndex: IndexPath?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -71,11 +72,10 @@ class ViewController: UIViewController {
   }
 
   @objc func removeToDo() {
-    if self.selectedIndexes.count > 0 {
-      for indexPath in self.selectedIndexes {
+    if let indexes = self.tableView.indexPathsForSelectedRows {
+      for indexPath in indexes {
         self.todoList.remove(at: indexPath)
       }
-      self.selectedIndexes.removeAll()
     }
   }
 
@@ -85,7 +85,6 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if self.tableView.isEditing {
-      self.selectedIndexes.append(indexPath)
     } else {
       var todo: ToDo = self.todoList.remove(at: indexPath)
       todo.isCompleted = !todo.isCompleted
@@ -105,6 +104,7 @@ extension ViewController: UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    self.selectedIndex = indexPath
     let nextViewController = ToDoMutationViewController()
     nextViewController.todo = self.todoList.find(by: indexPath)
     nextViewController.delegate = self
@@ -121,21 +121,9 @@ extension ViewController: ToDoMutationDelegate {
   }
 
   func edit(_ todo: ToDo) {
-    if let indexPath = self.tableView.indexPathForSelectedRow {
-      switch indexPath.section {
-      case 0:
-        self.todoList.highPriorities.remove(at: indexPath.row)
-        self.todoList.highPriorities.insert(todo, at: indexPath.row)
-      case 1:
-        self.todoList.mediumPriorities.remove(at: indexPath.row)
-        self.todoList.mediumPriorities.insert(todo, at: indexPath.row)
-      case 2:
-        self.todoList.lowPriorities.remove(at: indexPath.row)
-        self.todoList.lowPriorities.insert(todo, at: indexPath.row)
-      default:
-        self.todoList.highPriorities.remove(at: indexPath.row)
-        self.todoList.highPriorities.insert(todo, at: indexPath.row)
-      }
+    if let indexPath = self.selectedIndex {
+      self.todoList.remove(at: indexPath)
+      self.todoList.insert(at: indexPath, with: todo)
     }
   }
 
