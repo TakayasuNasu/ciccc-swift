@@ -1,0 +1,8 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+use_frameworks!
+
+target 'NavbarAnimation' do
+  pod 'Kingfisher', '~> 6.0'
+  pod 'SnapKit', '~> 5.0.0'
+end

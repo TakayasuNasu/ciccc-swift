@@ -55,6 +55,7 @@ class ViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     super.navigationController?.navigationBar.prefersLargeTitles = true
+    self.animate()
   }
 
   private func setupTableView() {
@@ -63,6 +64,22 @@ class ViewController: UIViewController {
     self.tableView.leftAnchor.constraint(equalTo: super.view.leftAnchor).isActive = true
     self.tableView.bottomAnchor.constraint(equalTo: super.view.bottomAnchor).isActive = true
     self.tableView.rightAnchor.constraint(equalTo: super.view.rightAnchor).isActive = true
+  }
+
+  @objc func animate() {
+    UIView.animate(withDuration: 4, animations: {
+      self.tableView.alpha = 0.0
+    }) {(_ Bool) in
+      self.showAgain()
+    }
+  }
+
+  func showAgain() {
+    UIView.animate(withDuration: 2, animations: {
+      self.tableView.alpha = 1.0
+    }) {(_ Bool) in
+      self.animate()
+    }
   }
 
   @objc func addToDo() {
@@ -78,6 +95,7 @@ class ViewController: UIViewController {
       }
     }
   }
+  
 
 }
 
