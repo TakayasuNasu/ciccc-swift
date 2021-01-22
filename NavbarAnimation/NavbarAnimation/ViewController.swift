@@ -48,7 +48,6 @@ class ViewController: UIViewController {
       img.translatesAutoresizingMaskIntoConstraints = false
       img.contentMode = UIView.ContentMode.scaleAspectFit
       img.isUserInteractionEnabled = true
-      img.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(setNameOnTable(_:))))
     }
     return imageViews
   }()
@@ -87,7 +86,7 @@ class ViewController: UIViewController {
   func setupImageview() {
     for img in self.imageViews {
       self.navigationStackView.addArrangedSubview(img)
-      img.target(forAction: #selector(setNameOnTable), withSender: .none)
+      img.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(setNameOnTable(_:))))
     }
   }
 
@@ -103,7 +102,7 @@ class ViewController: UIViewController {
     })
   }
 
-  @objc func setNameOnTable(_ sender: UIGestureRecognizer) {
+  @objc func setNameOnTable(_ sender: UITapGestureRecognizer) {
     print(12)
   }
 
