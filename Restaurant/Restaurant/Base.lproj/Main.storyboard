@@ -59,13 +59,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mq3-DX-xTw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" textLabel="vIP-eV-xjS" detailTextLabel="c9H-jX-Rzt" style="IBUITableViewCellStyleValue1" id="mq3-DX-xTw">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mq3-DX-xTw" id="0mN-a9-bx9">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vIP-eV-xjS">
+                                            <rect key="frame" x="20" y="12" width="45" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="$Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c9H-jX-Rzt">
+                                            <rect key="frame" x="345" y="12" width="49" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="U57-Oc-Be5" kind="presentation" identifier="confirmOrder" destinationCreationSelector="confirmOrder:" id="m9F-xF-JPf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,6 +97,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGy-eB-OO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137.68115942029" y="762.72321428571422"/>
+        </scene>
+        <!--Order Confirmation View Controller-->
+        <scene sceneID="3Sf-Xl-X1V">
+            <objects>
+                <viewController id="U57-Oc-Be5" customClass="OrderConfirmationViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZjU-Yq-uOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eq9-4B-Txp">
+                                <rect key="frame" x="20" y="15" width="374" height="773"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-y2-aKr" userLabel="Confirmation Label">
+                                        <rect key="frame" x="166.5" y="0.0" width="41.5" height="386.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-OB-8vR" userLabel="Dismiss">
+                                        <rect key="frame" x="164" y="386.5" width="46" height="386.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="unwindToOrderList:" destination="U57-Oc-Be5" eventType="touchUpInside" id="ETB-Lh-8KQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2vr-51-6E5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eq9-4B-Txp" firstAttribute="top" secondItem="2vr-51-6E5" secondAttribute="top" constant="15" id="KAp-j7-TJq"/>
+                            <constraint firstItem="Eq9-4B-Txp" firstAttribute="leading" secondItem="2vr-51-6E5" secondAttribute="leading" constant="20" id="Twv-ei-3rk"/>
+                            <constraint firstItem="2vr-51-6E5" firstAttribute="trailing" secondItem="Eq9-4B-Txp" secondAttribute="trailing" constant="20" id="mQT-tp-NcQ"/>
+                            <constraint firstItem="2vr-51-6E5" firstAttribute="bottom" secondItem="Eq9-4B-Txp" secondAttribute="bottom" constant="20" id="w08-bb-JNM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ND-MS-yZN"/>
+                    <connections>
+                        <outlet property="confirmationLabel" destination="QYR-y2-aKr" id="4KD-V8-Yis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMX-bX-mgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988" y="763"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="zVj-VJ-13b">
@@ -245,6 +309,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cpf-Zq-1b4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JPq-f6-ch2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

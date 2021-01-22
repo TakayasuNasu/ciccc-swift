@@ -9,6 +9,8 @@ import Foundation
 
 class MenuController {
 
+  static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
+  var order = Order()
   static let shared = MenuController()
   let baseURL = URL(string: "http://localhost:8090/")!
 

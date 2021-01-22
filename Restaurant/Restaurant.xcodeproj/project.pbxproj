@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B8C8E0325BB591D00DED04B /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8C8E0225BB591D00DED04B /* OrderConfirmationViewController.swift */; };
 		3BA8731D25BA2C8500E4C5D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8731C25BA2C8500E4C5D5 /* AppDelegate.swift */; };
 		3BA8731F25BA2C8500E4C5D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8731E25BA2C8500E4C5D5 /* SceneDelegate.swift */; };
 		3BA8732125BA2C8500E4C5D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8732025BA2C8500E4C5D5 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B8C8E0225BB591D00DED04B /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		3BA8731925BA2C8500E4C5D5 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA8731C25BA2C8500E4C5D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BA8731E25BA2C8500E4C5D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				3BA8733B25BA400600E4C5D5 /* MenuItemDetailViewController.swift */,
 				3BA8733225BA3A0400E4C5D5 /* CategoryTableViewController.swift */,
 				3BA8733525BA3A5300E4C5D5 /* MenuTableViewController.swift */,
+				3B8C8E0225BB591D00DED04B /* OrderConfirmationViewController.swift */,
 				3BA8733825BA3A6D00E4C5D5 /* OrderTableViewController.swift */,
 				3BA8734125BA41B800E4C5D5 /* ResponseModels.swift */,
 				3BA8734825BA481300E4C5D5 /* MenuController.swift */,
@@ -169,6 +172,7 @@
 				3BA8734925BA481300E4C5D5 /* MenuController.swift in Sources */,
 				3BA8731F25BA2C8500E4C5D5 /* SceneDelegate.swift in Sources */,
 				3BA8734225BA41B800E4C5D5 /* ResponseModels.swift in Sources */,
+				3B8C8E0325BB591D00DED04B /* OrderConfirmationViewController.swift in Sources */,
 				3BA8733F25BA419B00E4C5D5 /* MenuItem.swift in Sources */,
 				3BA8733925BA3A6D00E4C5D5 /* OrderTableViewController.swift in Sources */,
 				3BA8733325BA3A0400E4C5D5 /* CategoryTableViewController.swift in Sources */,
