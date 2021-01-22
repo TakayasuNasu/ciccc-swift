@@ -9,11 +9,11 @@ import UIKit
 
 class OrderConfirmationViewController: UIViewController {
 
-  let minutesTopPrepare: Int
+  let minutesToPrepare: Int
   @IBOutlet weak var confirmationLabel: UILabel!
   
   init?(coder: NSCoder, minutesTopPrepare: Int) {
-    self.minutesTopPrepare = minutesTopPrepare
+    self.minutesToPrepare = minutesTopPrepare
     super.init(coder: coder)
   }
 
@@ -23,9 +23,7 @@ class OrderConfirmationViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    confirmationLabel.text = "Thank you for your order! Your wait time is approximately \(minutesToPrepare) minutes."
   }
 
-  @IBAction func unwindToOrderList(_ sender: UIStoryboard) {
-  }
 }

@@ -75,21 +75,21 @@
 			isa = PBXGroup;
 			children = (
 				3BA8731C25BA2C8500E4C5D5 /* AppDelegate.swift */,
-				3BA8731E25BA2C8500E4C5D5 /* SceneDelegate.swift */,
-				3BA8732025BA2C8500E4C5D5 /* ViewController.swift */,
-				3BA8733B25BA400600E4C5D5 /* MenuItemDetailViewController.swift */,
+				3BA8732525BA2C8900E4C5D5 /* Assets.xcassets */,
 				3BA8733225BA3A0400E4C5D5 /* CategoryTableViewController.swift */,
+				3BA8732A25BA2C8900E4C5D5 /* Info.plist */,
+				3BA8732725BA2C8900E4C5D5 /* LaunchScreen.storyboard */,
+				3BA8732225BA2C8500E4C5D5 /* Main.storyboard */,
+				3BA8734825BA481300E4C5D5 /* MenuController.swift */,
+				3BA8733E25BA419B00E4C5D5 /* MenuItem.swift */,
+				3BA8733B25BA400600E4C5D5 /* MenuItemDetailViewController.swift */,
 				3BA8733525BA3A5300E4C5D5 /* MenuTableViewController.swift */,
+				3BA8734525BA466C00E4C5D5 /* Order.swift */,
 				3B8C8E0225BB591D00DED04B /* OrderConfirmationViewController.swift */,
 				3BA8733825BA3A6D00E4C5D5 /* OrderTableViewController.swift */,
 				3BA8734125BA41B800E4C5D5 /* ResponseModels.swift */,
-				3BA8734825BA481300E4C5D5 /* MenuController.swift */,
-				3BA8734525BA466C00E4C5D5 /* Order.swift */,
-				3BA8733E25BA419B00E4C5D5 /* MenuItem.swift */,
-				3BA8732225BA2C8500E4C5D5 /* Main.storyboard */,
-				3BA8732525BA2C8900E4C5D5 /* Assets.xcassets */,
-				3BA8732725BA2C8900E4C5D5 /* LaunchScreen.storyboard */,
-				3BA8732A25BA2C8900E4C5D5 /* Info.plist */,
+				3BA8731E25BA2C8500E4C5D5 /* SceneDelegate.swift */,
+				3BA8732025BA2C8500E4C5D5 /* ViewController.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";

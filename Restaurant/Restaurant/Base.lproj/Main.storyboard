@@ -92,7 +92,18 @@
                             <outlet property="delegate" destination="1T5-73-0VU" id="ePX-DI-Vyl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" largeTitleDisplayMode="never" id="h7N-w6-ohc"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" largeTitleDisplayMode="never" id="h7N-w6-ohc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lvV-m5-2tg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="25c-x1-baP">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <connections>
+                                <action selector="submitTapped:" destination="1T5-73-0VU" id="DcF-ZK-rkU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGy-eB-OO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,32 +117,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eq9-4B-Txp">
-                                <rect key="frame" x="20" y="15" width="374" height="773"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eq9-4B-Txp">
+                                <rect key="frame" x="20" y="354" width="374" height="100.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-y2-aKr" userLabel="Confirmation Label">
-                                        <rect key="frame" x="166.5" y="0.0" width="41.5" height="386.5"/>
+                                        <rect key="frame" x="166.5" y="0.0" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-OB-8vR" userLabel="Dismiss">
-                                        <rect key="frame" x="164" y="386.5" width="46" height="386.5"/>
+                                        <rect key="frame" x="164" y="70.5" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="unwindToOrderList:" destination="U57-Oc-Be5" eventType="touchUpInside" id="ETB-Lh-8KQ"/>
+                                            <action selector="unwindToOrderList:" destination="iOo-aW-9PS" eventType="touchUpInside" id="uWO-pQ-Otr"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100.5" id="6I3-tY-NRQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2vr-51-6E5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Eq9-4B-Txp" firstAttribute="top" secondItem="2vr-51-6E5" secondAttribute="top" constant="15" id="KAp-j7-TJq"/>
                             <constraint firstItem="Eq9-4B-Txp" firstAttribute="leading" secondItem="2vr-51-6E5" secondAttribute="leading" constant="20" id="Twv-ei-3rk"/>
+                            <constraint firstItem="Eq9-4B-Txp" firstAttribute="centerY" secondItem="2vr-51-6E5" secondAttribute="centerY" id="hVd-zq-96w"/>
                             <constraint firstItem="2vr-51-6E5" firstAttribute="trailing" secondItem="Eq9-4B-Txp" secondAttribute="trailing" constant="20" id="mQT-tp-NcQ"/>
-                            <constraint firstItem="2vr-51-6E5" firstAttribute="bottom" secondItem="Eq9-4B-Txp" secondAttribute="bottom" constant="20" id="w08-bb-JNM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8ND-MS-yZN"/>
@@ -140,6 +154,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMX-bX-mgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iOo-aW-9PS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1988" y="763"/>
         </scene>
