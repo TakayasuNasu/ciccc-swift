@@ -1,0 +1,47 @@
+PODS:
+  - Differentiator (5.0.0)
+  - Down (0.9.4)
+  - Kingfisher (6.0.1)
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Down
+  - Kingfisher
+  - RxCocoa
+  - RxDataSources
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - Down
+    - Kingfisher
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Down: 276f2c3eeeaf30345873bdad25f44b2640fcfa3a
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 77e753ed9b16d2ef9b622b28938cf2ac8fd3fa51
+
+COCOAPODS: 1.10.1
