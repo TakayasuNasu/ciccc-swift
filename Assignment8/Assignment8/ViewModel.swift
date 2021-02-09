@@ -44,12 +44,29 @@ struct ViewCuisine: ViewModel {
 
 struct MainViewModel: ViewModel {
 
-  var cuisins = BehaviorRelay<[AnimatableSectionModel<Int, Cuisine>]>(value: [AnimatableSectionModel<Int, Cuisine>(model: 0, items: Cuisines.data)])
+  var cuisines = BehaviorRelay<[AnimatableSectionModel<Int, Cuisine>]>(value: [AnimatableSectionModel<Int, Cuisine>(model: 0, items: Cuisines.data)])
   let tags = BehaviorRelay<[SectionModel<Int, Tag>]>(value: [SectionModel<Int, Tag>(model: 0, items: Tags.data)])
+  var selectedCuisin: Set<Cuisine> = []
   var selectedTag: Set<Int> = []
+  var isSingleColumn = false
+  var column: Int {
+    if self.isSingleColumn {
+      return 1
+    } else {
+      return 2
+    }
+  }
+
+  var imageHeight: CGFloat {
+    if self.isSingleColumn {
+      return 0.8
+    } else {
+      return 0.5
+    }
+  }
 
   let model: ModelProtocol
-  let cuisin = Cuisine()
+  let cuisine = Cuisine()
   let tag = Tag()
 
   init() {
@@ -60,18 +77,29 @@ struct MainViewModel: ViewModel {
     return Tags.data
   }
 
+  mutating func updateCuisins() {
+    let data: [Cuisine] = {
+      if self.selectedTag.count == 0 {
+        return Cuisines.data
+      } else {
+        self.selectedCuisin = []
+        for id in self.selectedTag {
+          Cuisines.data.filter { $0.tags.contains(id)}
+            .forEach { self.selectedCuisin.insert($0) }
+        }
+      }
+      return Array(self.selectedCuisin)
+    }()
+    var section: [AnimatableSectionModel<Int, Cuisine>] = []
+    section.append(AnimatableSectionModel<Int, Cuisine>(model: 0, items: data))
+    self.cuisines.accept(section)
+  }
+
   mutating func updateSelectedTag(id: Int) {
     if self.selectedTag.contains(id) {
       self.selectedTag.remove(id)
     } else {
       self.selectedTag.insert(id)
     }
-  }
-
-  func attribute(_ id: Int) -> String {
-    let cuisine = self.cuisin.all().filter { $0.id == id }.first
-    let tagList = Tags.data.filter { cuisine!.tags.contains($0.id) }
-    let names = tagList.map { $0.name }
-    return names.joined(separator: " ")
   }
 }

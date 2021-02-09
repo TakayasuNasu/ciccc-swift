@@ -19,6 +19,12 @@ class MainViewController: UIViewController {
   let disposeBag = DisposeBag()
   var viewModel = MainViewModel()
 
+
+  let switcher: UISwitch = {
+    let button = UISwitch()
+    return button
+  }()
+
   let cuisineCollectionView: UICollectionView = {
     let viewLayout = UICollectionViewFlowLayout()
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
@@ -30,6 +36,7 @@ class MainViewController: UIViewController {
     let viewLayout = UICollectionViewFlowLayout()
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
     collectionView.backgroundColor = .systemGray4
+    collectionView.allowsMultipleSelection = true
     return collectionView
   }()
 
@@ -40,7 +47,7 @@ class MainViewController: UIViewController {
         cell.mainVisual.kf.setImage(with: cuisine.image)
         cell.name.text = cuisine.name
         cell.price.text = "$\(cuisine.price)"
-        cell.tagNames.text = self.viewModel.attribute(indexPath.item + 1)
+        cell.tagNames.text = self.attribute(indexPath.item + 1)
         return cell
       }
     )
@@ -50,7 +57,7 @@ class MainViewController: UIViewController {
     return RxCollectionViewSectionedReloadDataSource<SectionModel<Int, Tag>>(
       configureCell: { _, collectionView, indexPath, tag -> UICollectionViewCell in
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tagCellIdentifier, for: indexPath) as! TagCollectionViewCell
-        cell.tagButton.setTitle(tag.name, for: .normal)
+        cell.tagLabel.text = tag.name
         return cell
       }
     )
@@ -59,6 +66,7 @@ class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     super.view.backgroundColor = .systemGray4
+    super.navigationItem.setRightBarButton(UIBarButtonItem(customView: switcher), animated: true)
     self.cuisineCollectionView.register(CuisineCollectionViewCell.self, forCellWithReuseIdentifier: cuisineCellIdentifier)
     self.cuisineCollectionView.setCollectionViewLayout(self.generateCuisineCollectionViewLayout(), animated: true)
     self.tagCollectionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: tagCellIdentifier)
@@ -67,6 +75,7 @@ class MainViewController: UIViewController {
     self.bindCuisineCollection()
     self.bindTagCollection()
     self.onSelectedTag()
+    self.toggleLayout()
   }
 
 }
@@ -90,7 +99,7 @@ extension MainViewController {
   }
 
   private func bindCuisineCollection() {
-    self.viewModel.cuisins
+    self.viewModel.cuisines
       .asDriver()
       .drive(self.cuisineCollectionView.rx.items(dataSource: self.cuisinsDataSource))
       .disposed(by: disposeBag)
@@ -106,7 +115,19 @@ extension MainViewController {
   private func onSelectedTag() {
     self.tagCollectionView.rx.itemSelected
       .subscribe(onNext: { [unowned self] indexPath in
-        self.viewModel.updateSelectedTag(id: indexPath.item)
+        self.viewModel.updateSelectedTag(id: indexPath.item + 1)
+        self.viewModel.updateCuisins()
+      }).disposed(by: disposeBag)
+
+    self.tagCollectionView.rx.itemHighlighted
+      .subscribe(onNext: { [unowned self] indexPath in
+        if let cell = tagCollectionView.cellForItem(at: indexPath) {
+          if cell.isSelected {
+            cell.contentView.backgroundColor = .systemGray6
+          } else {
+            cell.contentView.backgroundColor = .systemGray
+          }
+        }
       }).disposed(by: disposeBag)
 
   }
@@ -118,8 +139,8 @@ extension MainViewController {
     let item = NSCollectionLayoutItem(layoutSize: itemSize)
     item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: spacing, bottom: 0, trailing: spacing)
 
-    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.5))
-    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+    let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(self.viewModel.imageHeight))
+    let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: self.viewModel.column)
     group.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: 0, bottom: 0, trailing: 0)
 
     let section = NSCollectionLayoutSection(group: group)
@@ -143,5 +164,22 @@ extension MainViewController {
     section.interGroupSpacing = spacing
     return UICollectionViewCompositionalLayout(section: section)
   }
+
+  private func toggleLayout() {
+    self.switcher.rx.value
+      .subscribe(onNext: { value in
+        self.viewModel.isSingleColumn = value
+        self.cuisineCollectionView.setCollectionViewLayout(self.generateCuisineCollectionViewLayout(), animated: true)
+      })
+      .disposed(by: disposeBag)
+  }
+
+  func attribute(_ id: Int) -> String {
+    let cuisine = Cuisines.data.filter { $0.id == id }.first
+    let tagList = Tags.data.filter { cuisine!.tags.contains($0.id) }
+    let names = tagList.map { $0.name }
+    return names.joined(separator: " ")
+  }
+
 
 }

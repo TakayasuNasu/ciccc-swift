@@ -10,11 +10,10 @@ import SnapKit
 
 class TagCollectionViewCell: UICollectionViewCell {
 
-  let tagButton: UIButton = {
-    let button = UIButton()
-    button.setTitleColor(.systemBlue, for: .normal)
-    button.layer.cornerRadius = 6
-    return button
+  let tagLabel: UILabel = {
+    let label = UILabel()
+    label.textColor = .systemBlue
+    return label
   }()
 
   override init(frame: CGRect) {
@@ -28,10 +27,9 @@ class TagCollectionViewCell: UICollectionViewCell {
   }
 
   private func setUI() {
-    super.contentView.addSubview(self.tagButton)
-    self.tagButton.snp.makeConstraints { (make) -> Void in
-      make.top.leading.equalToSuperview().offset(5)
-      make.bottom.trailing.equalToSuperview().offset(-5)
+    super.contentView.addSubview(self.tagLabel)
+    self.tagLabel.snp.makeConstraints { (make) -> Void in
+      make.center.equalToSuperview()
     }
   }
 

@@ -22,7 +22,7 @@ extension ModelProtocol {
   }
 }
 
-struct Cuisine: ModelProtocol, IdentifiableType, Equatable {
+struct Cuisine: ModelProtocol, IdentifiableType, Equatable, Hashable {
 
   typealias Identity = Int
   var identity: Int {
