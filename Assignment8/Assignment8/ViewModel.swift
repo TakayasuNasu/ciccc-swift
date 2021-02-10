@@ -22,26 +22,6 @@ extension ViewModel {
   }
 }
 
-struct ViewCuisine: ViewModel {
-
-  let model: ModelProtocol
-
-  init(model: ModelProtocol) {
-    self.model = model
-  }
-
-  func all() -> [ModelProtocol] {
-    return self.model.all()
-  }
-
-  func attribute(_ id: Int) -> String {
-    let cuisine = self.model.all().filter { $0.id == id }.first
-    let tagList = Tags.data.filter { cuisine!.tags.contains($0.id) }
-    let names = tagList.map { $0.name }
-    return names.joined(separator: " ")
-  }
-}
-
 struct MainViewModel: ViewModel {
 
   var cuisines = BehaviorRelay<[AnimatableSectionModel<Int, Cuisine>]>(value: [AnimatableSectionModel<Int, Cuisine>(model: 0, items: Cuisines.data)])

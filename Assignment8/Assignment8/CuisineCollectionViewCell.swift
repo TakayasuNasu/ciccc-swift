@@ -56,7 +56,6 @@ class CuisineCollectionViewCell: UICollectionViewCell {
 
     super.contentView.addSubview(self.menu)
     self.menu.snp.makeConstraints { (make) -> Void in
-//      make.top.equalToSuperview().offset(super.contentView.bounds.height * 0.7)
       make.bottom.equalToSuperview().offset(super.contentView.bounds.height * 0.14 * -1)
       make.leading.equalToSuperview().offset(10)
       make.trailing.equalToSuperview().offset(-10)
