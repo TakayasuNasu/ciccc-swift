@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'SimpleToDoWithCoreData' do
+  use_frameworks!
+  pod 'SnapKit'
+  pod 'CombineCocoa'
+
+  target 'SimpleToDoWithCoreDataTests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+  end
+
+  target 'SimpleToDoWithCoreDataUITests' do
+    # Pods for testing
+  end
+
+end

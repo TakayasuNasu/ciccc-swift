@@ -1,0 +1,28 @@
+PODS:
+  - CombineCocoa (0.2.2)
+  - Nimble (9.0.0)
+  - Quick (3.1.2)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - CombineCocoa
+  - Nimble
+  - Quick
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - CombineCocoa
+    - Nimble
+    - Quick
+    - SnapKit
+
+SPEC CHECKSUMS:
+  CombineCocoa: 66c79441761907c096ecbd0021cefd8566acaf06
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 60f0ea3b8e0cfc0df3259a5c06a238ad8b3c46e0
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 38c9fd08d0eef2fb0cd96f98cea20e5b47934d7b
+
+COCOAPODS: 1.10.1

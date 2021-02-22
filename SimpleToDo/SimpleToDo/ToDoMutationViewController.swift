@@ -46,6 +46,11 @@ class ToDoMutationViewController: UIViewController {
     self.textField.trailingAnchor.constraint(equalTo: super.view.trailingAnchor, constant: -20).isActive = true
   }
 
+}
+
+// MARK: - Event listener
+extension ToDoMutationViewController {
+
   @objc private func addOrUpdate() {
     let data = ToDo(title: self.textField.text!, priority: 1, isCompleted: false)
     if self.todo == nil {
@@ -55,5 +60,5 @@ class ToDoMutationViewController: UIViewController {
     }
     super.navigationController?.popToRootViewController(animated: true)
   }
-  
+
 }
