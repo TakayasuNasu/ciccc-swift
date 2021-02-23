@@ -24,7 +24,7 @@ class ToDoListViewController: UIViewController {
     let layout = UICollectionViewCompositionalLayout.list(using: configuration)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.backgroundColor = .systemBackground
-    collectionView.allowsSelection = false
+    collectionView.allowsMultipleSelection = true
     return collectionView
   }()
 
@@ -100,7 +100,10 @@ extension ToDoListViewController: UICollectionViewDataSource, UICollectionViewDe
     let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, ManagedToDo> { cell, indexPath, item in
       var content = cell.defaultContentConfiguration()
       content.text = item.title
-      cell.accessories = [.disclosureIndicator(options: .init(tintColor: .systemGray)),]
+      cell.accessories = [
+        .disclosureIndicator(options: .init(tintColor: .systemGray)),
+        .reorder()
+      ]
       cell.contentConfiguration = content
     }
     let object = self.viewModel.fetchedResultsController.object(at: indexPath)
@@ -108,11 +111,9 @@ extension ToDoListViewController: UICollectionViewDataSource, UICollectionViewDe
     return cell
   }
 
-  
   override func setEditing(_ editing: Bool, animated: Bool) {
     super.setEditing(editing, animated: animated)
-    self.collectionView.allowsSelection = editing
-    self.collectionView.allowsMultipleSelection = editing
+    self.collectionView.isEditing = editing
   }
 
 }
