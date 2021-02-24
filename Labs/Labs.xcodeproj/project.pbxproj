@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B15B93525E5A934008DE39C /* DateCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B15B93425E5A934008DE39C /* DateCalculator.m */; };
+		3B15B93A25E5CD15008DE39C /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B15B93925E5CD15008DE39C /* Box.m */; };
 		3B430C9C25E4851400DB7919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B430C9B25E4851400DB7919 /* main.m */; };
 		3B430CAB25E4858500DB7919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B430CAA25E4858500DB7919 /* main.m */; };
 /* End PBXBuildFile section */
@@ -33,6 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B15B93325E5A934008DE39C /* DateCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateCalculator.h; sourceTree = "<group>"; };
+		3B15B93425E5A934008DE39C /* DateCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateCalculator.m; sourceTree = "<group>"; };
+		3B15B93825E5CD15008DE39C /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		3B15B93925E5CD15008DE39C /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		3B430C9825E4851400DB7919 /* Lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B430C9B25E4851400DB7919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B430CA825E4858400DB7919 /* Lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab2; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +92,10 @@
 		3B430CA925E4858500DB7919 /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				3B15B93825E5CD15008DE39C /* Box.h */,
+				3B15B93925E5CD15008DE39C /* Box.m */,
+				3B15B93325E5A934008DE39C /* DateCalculator.h */,
+				3B15B93425E5A934008DE39C /* DateCalculator.m */,
 				3B430CAA25E4858500DB7919 /* main.m */,
 			);
 			path = Lab2;
@@ -176,7 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B15B93A25E5CD15008DE39C /* Box.m in Sources */,
 				3B430CAB25E4858500DB7919 /* main.m in Sources */,
+				3B15B93525E5A934008DE39C /* DateCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
