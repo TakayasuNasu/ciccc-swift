@@ -15,15 +15,16 @@
   if (self) {
 
     NSMutableArray *dices = [[NSMutableArray alloc] init];
+
     for (int i = 0; i < 5; i++){
       Dice *newDice = [[Dice alloc] init];
       [newDice setValue: arc4random_uniform(6)+1];
       [dices addObject:newDice];
     }
 
-    _dices = [NSArray arrayWithArray:dices];
-    _holdingIndexes = [NSMutableSet new];
-    _rollCount = 0;
+    [self setDices:[NSArray arrayWithArray:dices]];
+    [self setHoldingIndexes:[NSMutableSet new]];
+    [self setRollCount:0];
   }
   return self;
 }
@@ -49,16 +50,16 @@
 
 - (void)holdDiceWithIndex: (NSNumber*) index
 {
-  if ([_holdingIndexes containsObject:index]){
-    [_holdingIndexes removeObject:index];
+  if ([[self holdingIndexes] containsObject:index]){
+    [[self holdingIndexes] removeObject:index];
   }else if ([index intValue] >= 0 && [index intValue] <= 4){
-    [_holdingIndexes addObject:index];
+    [[self holdingIndexes] addObject:index];
   }
 }
 
 - (void) resetDice
 {
-  [_holdingIndexes removeAllObjects];
+  [[self holdingIndexes] removeAllObjects];
 }
 
 + (void)displayCommandLists
