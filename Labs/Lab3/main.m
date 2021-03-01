@@ -6,41 +6,48 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
 #import "ScoreKeeper.h"
 #import "InputHandler.h"
+#import "Question.h"
+#import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-    AdditionQuestion *question = [[AdditionQuestion alloc] init ];
-    InputHandler *inputHandler = [[InputHandler alloc] init];
+    BOOL onGame = YES;
+    NSLog(@"MATHS");
 
-    while (YES) {
-      NSString *startOrCancel = [inputHandler getUserInput:255 And: @"Enter you Answer ('q' to quit): *\n"];
+    NSString *right = @"Right!";
+    NSString *wrong = @"Wrong!";
+
+    InputHandler *inputHandler = [[InputHandler alloc] init];
+    QuestionManager *questionManager = [[QuestionManager alloc] init];
+    ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
+    QuestionFactory *factory = [[QuestionFactory alloc] init];
+
+    NSString *startOrCancel = [inputHandler getUserInput:255 And: @"Enter you Answer ('q' to quit): *\n"];
+    while (onGame) {
       if ([startOrCancel isEqualToString: @"q"]) {
         break;
       }
-
-      ScoreKeeper *scoreKeeper = [[ScoreKeeper alloc] init];
-      NSLog(@"MATHS");
-      while (YES) {
-        NSInteger correctAnswer = [question getCorrectAnswer];
-        NSString *answer = [inputHandler getUserInput:255 And: @""];
-        if ([answer isEqualToString: @"q"]) {
-          break;
-        }
-        NSInteger score = [question verify: correctAnswer AndYourAnswer: answer];
-        if (score > 0) {
-          [scoreKeeper setRight: [scoreKeeper right] + score];
-        } else {
-          [scoreKeeper setWrong: [scoreKeeper wrong] + 1];
-        }
+      Question *questionAndAnswer = [factory generateRandomQuestion];
+      [[questionManager questions] addObject:questionAndAnswer];
+      NSLog(@"%@", questionAndAnswer.question);
+      NSString *answer = [inputHandler getUserInput:255 And: @""];
+      if ([answer isEqual: @"q"]){ break; }
+      if ([answer isEqual: @"quit"]){ break; }
+      if ([answer intValue] == questionAndAnswer.answer) {
+        NSLog(@"%@", right);
+        [scoreKeeper setRight: [scoreKeeper right] + 1];
+      } else {
+        NSLog(@"%@", wrong);
+        [scoreKeeper setWrong: [scoreKeeper wrong] + 1];
       }
-
-      // 3 / total * 100
-      NSInteger ratio = [scoreKeeper right] * 100 / ([scoreKeeper right] + [scoreKeeper wrong]);
-      NSLog(@"score: %ld right, %ld wrong ---- %ld%%", (long)[scoreKeeper right], (long)[scoreKeeper wrong], (long)ratio);
     }
+    NSInteger ratio = [scoreKeeper right] * 100 / ([scoreKeeper right] + [scoreKeeper wrong]);
+    NSLog(@"score: %ld right, %ld wrong ---- %ld%%", (long)[scoreKeeper right], (long)[scoreKeeper wrong], (long)ratio);
+    NSString *totalTime = [questionManager timeOutput];
+    NSLog(@"%@", totalTime);
   }
   return 0;
 }

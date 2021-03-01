@@ -15,7 +15,9 @@
     maxLength = 255;
   }
 
-  NSLog(@"%@", prompt);
+  if ([prompt length] > 0) {
+    NSLog(@"%@", prompt);
+  }
 
   char inputChars[maxLength];
   char *result = fgets(inputChars, maxLength, stdin);
