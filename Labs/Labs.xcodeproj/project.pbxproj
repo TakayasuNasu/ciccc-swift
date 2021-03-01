@@ -30,6 +30,10 @@
 		3BD7DFFA25ECB0E000697395 /* SubtractionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7DFF925ECB0E000697395 /* SubtractionQuestion.m */; };
 		3BD7E00325ECB0FC00697395 /* MultiplicationQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E00225ECB0FC00697395 /* MultiplicationQuestion.m */; };
 		3BD7E00C25ECB10700697395 /* DivisionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E00B25ECB10700697395 /* DivisionQuestion.m */; };
+		3BD7E01A25ECB81B00697395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E01925ECB81B00697395 /* main.m */; };
+		3BD7E02725ECB89200697395 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E02625ECB89200697395 /* InputHandler.m */; };
+		3BD7E03125ECB89F00697395 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E03025ECB89F00697395 /* GameController.m */; };
+		3BD7E03B25ECB8A800697395 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E03A25ECB8A800697395 /* Dice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,6 +91,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		3BD7E01525ECB81B00697395 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +149,14 @@
 		3BD7E00225ECB0FC00697395 /* MultiplicationQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiplicationQuestion.m; sourceTree = "<group>"; };
 		3BD7E00A25ECB10700697395 /* DivisionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DivisionQuestion.h; sourceTree = "<group>"; };
 		3BD7E00B25ECB10700697395 /* DivisionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DivisionQuestion.m; sourceTree = "<group>"; };
+		3BD7E01725ECB81B00697395 /* Lab6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab6; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD7E01925ECB81B00697395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BD7E02525ECB89200697395 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		3BD7E02625ECB89200697395 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		3BD7E02F25ECB89F00697395 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		3BD7E03025ECB89F00697395 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		3BD7E03925ECB8A700697395 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
+		3BD7E03A25ECB8A800697395 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +202,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD7E01425ECB81B00697395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,6 +221,7 @@
 				3BD7DEC425E84CDD00697395 /* Lab4 */,
 				3BD7DED325E85A4900697395 /* Lab13 */,
 				3BD7DF1425E99AEF00697395 /* ProtocolDelegate */,
+				3BD7E01825ECB81B00697395 /* Lab6 */,
 				3B430C9925E4851400DB7919 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,6 +235,7 @@
 				3BD7DEC325E84CDD00697395 /* Lab4 */,
 				3BD7DED225E85A4900697395 /* Lab13 */,
 				3BD7DF1325E99AEF00697395 /* ProtocolDelegate */,
+				3BD7E01725ECB81B00697395 /* Lab6 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,14 +320,28 @@
 			children = (
 				3BD7DFEF25ECB0BA00697395 /* AdditionQuestion.h */,
 				3BD7DFF025ECB0BA00697395 /* AdditionQuestion.m */,
-				3BD7DFF825ECB0E000697395 /* SubtractionQuestion.h */,
-				3BD7DFF925ECB0E000697395 /* SubtractionQuestion.m */,
-				3BD7E00125ECB0FC00697395 /* MultiplicationQuestion.h */,
-				3BD7E00225ECB0FC00697395 /* MultiplicationQuestion.m */,
 				3BD7E00A25ECB10700697395 /* DivisionQuestion.h */,
 				3BD7E00B25ECB10700697395 /* DivisionQuestion.m */,
+				3BD7E00125ECB0FC00697395 /* MultiplicationQuestion.h */,
+				3BD7E00225ECB0FC00697395 /* MultiplicationQuestion.m */,
+				3BD7DFF825ECB0E000697395 /* SubtractionQuestion.h */,
+				3BD7DFF925ECB0E000697395 /* SubtractionQuestion.m */,
 			);
 			path = SubQuestion;
+			sourceTree = "<group>";
+		};
+		3BD7E01825ECB81B00697395 /* Lab6 */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7E03925ECB8A700697395 /* Dice.h */,
+				3BD7E03A25ECB8A800697395 /* Dice.m */,
+				3BD7E02F25ECB89F00697395 /* GameController.h */,
+				3BD7E03025ECB89F00697395 /* GameController.m */,
+				3BD7E02525ECB89200697395 /* InputHandler.h */,
+				3BD7E02625ECB89200697395 /* InputHandler.m */,
+				3BD7E01925ECB81B00697395 /* main.m */,
+			);
+			path = Lab6;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +449,23 @@
 			productReference = 3BD7DF1325E99AEF00697395 /* ProtocolDelegate */;
 			productType = "com.apple.product-type.tool";
 		};
+		3BD7E01625ECB81B00697395 /* Lab6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD7E01B25ECB81B00697395 /* Build configuration list for PBXNativeTarget "Lab6" */;
+			buildPhases = (
+				3BD7E01325ECB81B00697395 /* Sources */,
+				3BD7E01425ECB81B00697395 /* Frameworks */,
+				3BD7E01525ECB81B00697395 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab6;
+			productName = Lab6;
+			productReference = 3BD7E01725ECB81B00697395 /* Lab6 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -431,6 +492,9 @@
 					3BD7DF1225E99AEF00697395 = {
 						CreatedOnToolsVersion = 12.3;
 					};
+					3BD7E01625ECB81B00697395 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = 3B430C9325E4851400DB7919 /* Build configuration list for PBXProject "Labs" */;
@@ -452,6 +516,7 @@
 				3BD7DEC225E84CDD00697395 /* Lab4 */,
 				3BD7DED125E85A4900697395 /* Lab13 */,
 				3BD7DF1225E99AEF00697395 /* ProtocolDelegate */,
+				3BD7E01625ECB81B00697395 /* Lab6 */,
 			);
 		};
 /* End PBXProject section */
@@ -519,6 +584,17 @@
 				3BD7DF3425E99B2800697395 /* BadAccountant.m in Sources */,
 				3BD7DF2B25E99B1D00697395 /* GoodAccountant.m in Sources */,
 				3BD7DF1625E99AEF00697395 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD7E01325ECB81B00697395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD7E03125ECB89F00697395 /* GameController.m in Sources */,
+				3BD7E01A25ECB81B00697395 /* main.m in Sources */,
+				3BD7E03B25ECB8A800697395 /* Dice.m in Sources */,
+				3BD7E02725ECB89200697395 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +832,26 @@
 			};
 			name = Release;
 		};
+		3BD7E01C25ECB81B00697395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BD7E01D25ECB81B00697395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -818,6 +914,15 @@
 			buildConfigurations = (
 				3BD7DF1825E99AEF00697395 /* Debug */,
 				3BD7DF1925E99AEF00697395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD7E01B25ECB81B00697395 /* Build configuration list for PBXNativeTarget "Lab6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD7E01C25ECB81B00697395 /* Debug */,
+				3BD7E01D25ECB81B00697395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
