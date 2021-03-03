@@ -39,6 +39,10 @@
 		3BD7E09425EDAEDB00697395 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E09325EDAEDB00697395 /* Pizza.m */; };
 		3BD7E16C25EF33CA00697395 /* DislikeAnchovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */; };
 		3BD7E17725EF3E5A00697395 /* CheeryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E17625EF3E5A00697395 /* CheeryManager.m */; };
+		3BD7E18F25F039E700697395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E18E25F039E700697395 /* main.m */; };
+		3BD7E19E25F03A5A00697395 /* Chef.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E19D25F03A5A00697395 /* Chef.m */; };
+		3BD7E1AA25F03A6600697395 /* Cook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E1A925F03A6600697395 /* Cook.m */; };
+		3BD7E1B625F03A7500697395 /* FoodTruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E1B525F03A7500697395 /* FoodTruck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +118,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		3BD7E18A25F039E700697395 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +194,14 @@
 		3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DislikeAnchovieManager.m; sourceTree = "<group>"; };
 		3BD7E17525EF3E5A00697395 /* CheeryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheeryManager.h; sourceTree = "<group>"; };
 		3BD7E17625EF3E5A00697395 /* CheeryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheeryManager.m; sourceTree = "<group>"; };
+		3BD7E18C25F039E700697395 /* Lab9 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab9; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD7E18E25F039E700697395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BD7E19C25F03A5A00697395 /* Chef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chef.h; sourceTree = "<group>"; };
+		3BD7E19D25F03A5A00697395 /* Chef.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chef.m; sourceTree = "<group>"; };
+		3BD7E1A825F03A6600697395 /* Cook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cook.h; sourceTree = "<group>"; };
+		3BD7E1A925F03A6600697395 /* Cook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cook.m; sourceTree = "<group>"; };
+		3BD7E1B425F03A7500697395 /* FoodTruck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodTruck.h; sourceTree = "<group>"; };
+		3BD7E1B525F03A7500697395 /* FoodTruck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +261,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD7E18925F039E700697395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -254,6 +282,7 @@
 				3BD7DF1425E99AEF00697395 /* ProtocolDelegate */,
 				3BD7E01825ECB81B00697395 /* Lab6 */,
 				3BD7E07825EDACD900697395 /* Lab8-PizzaRestaurant */,
+				3BD7E18D25F039E700697395 /* Lab9 */,
 				3B430C9925E4851400DB7919 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -269,6 +298,7 @@
 				3BD7DF1325E99AEF00697395 /* ProtocolDelegate */,
 				3BD7E01725ECB81B00697395 /* Lab6 */,
 				3BD7E07725EDACD900697395 /* Lab8-PizzaRestaurant */,
+				3BD7E18C25F039E700697395 /* Lab9 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -391,6 +421,20 @@
 				3BD7E09325EDAEDB00697395 /* Pizza.m */,
 			);
 			path = "Lab8-PizzaRestaurant";
+			sourceTree = "<group>";
+		};
+		3BD7E18D25F039E700697395 /* Lab9 */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7E19C25F03A5A00697395 /* Chef.h */,
+				3BD7E19D25F03A5A00697395 /* Chef.m */,
+				3BD7E1A825F03A6600697395 /* Cook.h */,
+				3BD7E1A925F03A6600697395 /* Cook.m */,
+				3BD7E1B425F03A7500697395 /* FoodTruck.h */,
+				3BD7E1B525F03A7500697395 /* FoodTruck.m */,
+				3BD7E18E25F039E700697395 /* main.m */,
+			);
+			path = Lab9;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +576,23 @@
 			productReference = 3BD7E07725EDACD900697395 /* Lab8-PizzaRestaurant */;
 			productType = "com.apple.product-type.tool";
 		};
+		3BD7E18B25F039E700697395 /* Lab9 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD7E19025F039E700697395 /* Build configuration list for PBXNativeTarget "Lab9" */;
+			buildPhases = (
+				3BD7E18825F039E700697395 /* Sources */,
+				3BD7E18925F039E700697395 /* Frameworks */,
+				3BD7E18A25F039E700697395 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab9;
+			productName = Lab9;
+			productReference = 3BD7E18C25F039E700697395 /* Lab9 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -564,6 +625,9 @@
 					3BD7E07625EDACD900697395 = {
 						CreatedOnToolsVersion = 12.3;
 					};
+					3BD7E18B25F039E700697395 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = 3B430C9325E4851400DB7919 /* Build configuration list for PBXProject "Labs" */;
@@ -587,6 +651,7 @@
 				3BD7DF1225E99AEF00697395 /* ProtocolDelegate */,
 				3BD7E01625ECB81B00697395 /* Lab6 */,
 				3BD7E07625EDACD900697395 /* Lab8-PizzaRestaurant */,
+				3BD7E18B25F039E700697395 /* Lab9 */,
 			);
 		};
 /* End PBXProject section */
@@ -677,6 +742,17 @@
 				3BD7E09425EDAEDB00697395 /* Pizza.m in Sources */,
 				3BD7E08925EDAE1B00697395 /* Kitchen.m in Sources */,
 				3BD7E07A25EDACD900697395 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD7E18825F039E700697395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD7E18F25F039E700697395 /* main.m in Sources */,
+				3BD7E19E25F03A5A00697395 /* Chef.m in Sources */,
+				3BD7E1AA25F03A6600697395 /* Cook.m in Sources */,
+				3BD7E1B625F03A7500697395 /* FoodTruck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -954,6 +1030,26 @@
 			};
 			name = Release;
 		};
+		3BD7E19125F039E700697395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BD7E19225F039E700697395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1034,6 +1130,15 @@
 			buildConfigurations = (
 				3BD7E07C25EDACD900697395 /* Debug */,
 				3BD7E07D25EDACD900697395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD7E19025F039E700697395 /* Build configuration list for PBXNativeTarget "Lab9" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD7E19125F039E700697395 /* Debug */,
+				3BD7E19225F039E700697395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
