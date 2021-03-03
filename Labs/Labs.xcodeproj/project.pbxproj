@@ -37,6 +37,8 @@
 		3BD7E07A25EDACD900697395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E07925EDACD900697395 /* main.m */; };
 		3BD7E08925EDAE1B00697395 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E08825EDAE1B00697395 /* Kitchen.m */; };
 		3BD7E09425EDAEDB00697395 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E09325EDAEDB00697395 /* Pizza.m */; };
+		3BD7E16C25EF33CA00697395 /* DislikeAnchovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */; };
+		3BD7E17725EF3E5A00697395 /* CheeryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E17625EF3E5A00697395 /* CheeryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -175,6 +177,10 @@
 		3BD7E08825EDAE1B00697395 /* Kitchen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kitchen.m; sourceTree = "<group>"; };
 		3BD7E09225EDAEDB00697395 /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		3BD7E09325EDAEDB00697395 /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
+		3BD7E16A25EF33CA00697395 /* DislikeAnchovieManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DislikeAnchovieManager.h; sourceTree = "<group>"; };
+		3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DislikeAnchovieManager.m; sourceTree = "<group>"; };
+		3BD7E17525EF3E5A00697395 /* CheeryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheeryManager.h; sourceTree = "<group>"; };
+		3BD7E17625EF3E5A00697395 /* CheeryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheeryManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +380,10 @@
 		3BD7E07825EDACD900697395 /* Lab8-PizzaRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				3BD7E17525EF3E5A00697395 /* CheeryManager.h */,
+				3BD7E17625EF3E5A00697395 /* CheeryManager.m */,
+				3BD7E16A25EF33CA00697395 /* DislikeAnchovieManager.h */,
+				3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */,
 				3BD7E08725EDAE1B00697395 /* Kitchen.h */,
 				3BD7E08825EDAE1B00697395 /* Kitchen.m */,
 				3BD7E07925EDACD900697395 /* main.m */,
@@ -662,6 +672,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD7E17725EF3E5A00697395 /* CheeryManager.m in Sources */,
+				3BD7E16C25EF33CA00697395 /* DislikeAnchovieManager.m in Sources */,
 				3BD7E09425EDAEDB00697395 /* Pizza.m in Sources */,
 				3BD7E08925EDAE1B00697395 /* Kitchen.m in Sources */,
 				3BD7E07A25EDACD900697395 /* main.m in Sources */,

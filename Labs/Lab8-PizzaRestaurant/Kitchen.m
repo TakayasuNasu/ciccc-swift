@@ -6,8 +6,26 @@
 //
 
 #import "Kitchen.h"
+#import "CheeryManager.h"
+#import "DislikeAnchovieManager.h"
 
 @implementation Kitchen
+
+- (instancetype)init
+{
+  self = [super init];
+  if (self) {
+    NSInteger randomNumber = arc4random_uniform(2);
+    if (randomNumber == 0) {
+      CheeryManager *manager = [[CheeryManager alloc] init];
+      _delegate = manager;
+    } else {
+      DislikeAnchovieManager *manager = [[DislikeAnchovieManager alloc] init];
+      _delegate = manager;
+    }
+  }
+  return self;
+}
 
 - (Pizza *) order:(NSArray *) orderOfUser
 {
@@ -38,7 +56,7 @@
 
 - (Pizza *) makePizzaWithSize:(PizzaSize *) size toppings:(NSArray *) toppings
 {
-  BOOL shouldMake = [[self delegate] kitchen:self shouldMakePizzaOfSize:*size andToppings:toppings];
+  BOOL shouldMake = [[self delegate] kitchen:self shouldMakePizzaOfSize: size andToppings:toppings];
   if (!shouldMake) {
     //
   }
@@ -47,7 +65,13 @@
   if (shouldUpgradeOrder) {
     size = (NSInteger *)large;
   }
-  return [[Pizza alloc] initWitSize: size AndTopping: toppings];
+
+  Pizza *pizza = [[Pizza alloc] initWitSize: size AndTopping: toppings];
+  BOOL hasMethod = [[self delegate] respondsToSelector:@selector(kitchenDidMakePizza:)];
+  if (hasMethod) {
+    [[self delegate] kitchenDidMakePizza: pizza];
+  }
+  return pizza;
 }
 
 @end

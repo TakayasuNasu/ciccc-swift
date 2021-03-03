@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
       NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
       if ([commandWords count] > 2) {
         Pizza *pizza = [restaurantKitchen order:commandWords];
-        NSLog(@"%@",pizza);
+        NSLog(@"%@",GetPizzaSizeText((int)[pizza size]));
       }
     }
   }
