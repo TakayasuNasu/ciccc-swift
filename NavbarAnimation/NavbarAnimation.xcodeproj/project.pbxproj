@@ -12,6 +12,8 @@
 		3B9B9B9425AF90E2000C5F25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B9B9325AF90E2000C5F25 /* ViewController.swift */; };
 		3B9B9B9925AF90E6000C5F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9B9B9825AF90E6000C5F25 /* Assets.xcassets */; };
 		3B9B9B9C25AF90E6000C5F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9B9B9A25AF90E6000C5F25 /* LaunchScreen.storyboard */; };
+		3BD7E16025EE1FEB00697395 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E15F25EE1FEB00697395 /* ViewModel.swift */; };
+		3BD7E16425EE209B00697395 /* Sweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E16325EE209B00697395 /* Sweets.swift */; };
 		A11A7E0DD8A90B775D694275 /* Pods_NavbarAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCCBFA389F0777BC2EB5ACB /* Pods_NavbarAnimation.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		3B9B9B9825AF90E6000C5F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B9B9B9B25AF90E6000C5F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B9B9B9D25AF90E6000C5F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BD7E15F25EE1FEB00697395 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3BD7E16325EE209B00697395 /* Sweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sweets.swift; sourceTree = "<group>"; };
 		59F9F9F489847A7FDEC9A388 /* Pods-NavbarAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavbarAnimation.release.xcconfig"; path = "Target Support Files/Pods-NavbarAnimation/Pods-NavbarAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		BDCCBFA389F0777BC2EB5ACB /* Pods_NavbarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavbarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +65,24 @@
 		3B9B9B8E25AF90E2000C5F25 /* NavbarAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				3B9B9B8F25AF90E2000C5F25 /* AppDelegate.swift */,
-				3B9B9B9825AF90E6000C5F25 /* Assets.xcassets */,
 				3B9B9B9D25AF90E6000C5F25 /* Info.plist */,
-				3B9B9B9A25AF90E6000C5F25 /* LaunchScreen.storyboard */,
-				3B9B9B9125AF90E2000C5F25 /* SceneDelegate.swift */,
+				3BD7E16825EE219500697395 /* Support Files */,
+				3BD7E16325EE209B00697395 /* Sweets.swift */,
 				3B9B9B9325AF90E2000C5F25 /* ViewController.swift */,
+				3BD7E15F25EE1FEB00697395 /* ViewModel.swift */,
 			);
 			path = NavbarAnimation;
+			sourceTree = "<group>";
+		};
+		3BD7E16825EE219500697395 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B9B9B8F25AF90E2000C5F25 /* AppDelegate.swift */,
+				3B9B9B9825AF90E6000C5F25 /* Assets.xcassets */,
+				3B9B9B9A25AF90E6000C5F25 /* LaunchScreen.storyboard */,
+				3B9B9B9125AF90E2000C5F25 /* SceneDelegate.swift */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		97674BC72073D4EF18347DC5 /* Pods */ = {
@@ -201,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD7E16425EE209B00697395 /* Sweets.swift in Sources */,
 				3B9B9B9425AF90E2000C5F25 /* ViewController.swift in Sources */,
 				3B9B9B9025AF90E2000C5F25 /* AppDelegate.swift in Sources */,
+				3BD7E16025EE1FEB00697395 /* ViewModel.swift in Sources */,
 				3B9B9B9225AF90E2000C5F25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
