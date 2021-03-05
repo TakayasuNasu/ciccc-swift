@@ -18,6 +18,11 @@
 		3B2C6DDA25CE17BE004C6ED0 /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C6DD925CE17BE004C6ED0 /* DefaultData.swift */; };
 		3B2C6DDF25CE93E3004C6ED0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C6DDE25CE93E3004C6ED0 /* MainViewController.swift */; };
 		3B2C6DE325CF4A82004C6ED0 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C6DE225CF4A82004C6ED0 /* TagCollectionViewCell.swift */; };
+		3BD7E27A25F0BE7600697395 /* TimHorthonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E27925F0BE7600697395 /* TimHorthonViewController.swift */; };
+		3BD7E27E25F0BE9500697395 /* TimHortonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E27D25F0BE9500697395 /* TimHortonViewModel.swift */; };
+		3BD7E28125F0BEB600697395 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28025F0BEB600697395 /* HomeViewController.swift */; };
+		3BD7E28725F0CB8000697395 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28625F0CB8000697395 /* Food.swift */; };
+		3BD7E28F25F1838D00697395 /* TimHortonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28E25F1838C00697395 /* TimHortonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		3B2C6DD925CE17BE004C6ED0 /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
 		3B2C6DDE25CE93E3004C6ED0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3B2C6DE225CF4A82004C6ED0 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BD7E27925F0BE7600697395 /* TimHorthonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimHorthonViewController.swift; sourceTree = "<group>"; };
+		3BD7E27D25F0BE9500697395 /* TimHortonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimHortonViewModel.swift; sourceTree = "<group>"; };
+		3BD7E28025F0BEB600697395 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3BD7E28625F0CB8000697395 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		3BD7E28E25F1838C00697395 /* TimHortonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimHortonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,19 +81,48 @@
 		3B2C6DA125CD3502004C6ED0 /* Assignment8 */ = {
 			isa = PBXGroup;
 			children = (
-				3B2C6DA225CD3502004C6ED0 /* AppDelegate.swift */,
-				3B2C6DAB25CD3507004C6ED0 /* Assets.xcassets */,
-				3B2C6DD625CE170B004C6ED0 /* CuisineCollectionViewCell.swift */,
 				3B2C6DD925CE17BE004C6ED0 /* DefaultData.swift */,
+				3BD7E28025F0BEB600697395 /* HomeViewController.swift */,
 				3B2C6DB025CD3507004C6ED0 /* Info.plist */,
-				3B2C6DAD25CD3507004C6ED0 /* LaunchScreen.storyboard */,
-				3B2C6DDE25CE93E3004C6ED0 /* MainViewController.swift */,
-				3B2C6DE225CF4A82004C6ED0 /* TagCollectionViewCell.swift */,
 				3B2C6DD225CE06AC004C6ED0 /* Model.swift */,
-				3B2C6DA425CD3502004C6ED0 /* SceneDelegate.swift */,
-				3B2C6DCF25CD405D004C6ED0 /* ViewModel.swift */,
+				3BD7E27725F0A76500697395 /* Saizeriya */,
+				3BD7E27525F0A63100697395 /* Support Files */,
+				3BD7E27825F0A80200697395 /* Tim Hortons */,
 			);
 			path = Assignment8;
+			sourceTree = "<group>";
+		};
+		3BD7E27525F0A63100697395 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C6DA225CD3502004C6ED0 /* AppDelegate.swift */,
+				3B2C6DAB25CD3507004C6ED0 /* Assets.xcassets */,
+				3B2C6DAD25CD3507004C6ED0 /* LaunchScreen.storyboard */,
+				3B2C6DA425CD3502004C6ED0 /* SceneDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		3BD7E27725F0A76500697395 /* Saizeriya */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C6DD625CE170B004C6ED0 /* CuisineCollectionViewCell.swift */,
+				3B2C6DDE25CE93E3004C6ED0 /* MainViewController.swift */,
+				3B2C6DE225CF4A82004C6ED0 /* TagCollectionViewCell.swift */,
+				3B2C6DCF25CD405D004C6ED0 /* ViewModel.swift */,
+			);
+			path = Saizeriya;
+			sourceTree = "<group>";
+		};
+		3BD7E27825F0A80200697395 /* Tim Hortons */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7E28625F0CB8000697395 /* Food.swift */,
+				3BD7E27925F0BE7600697395 /* TimHorthonViewController.swift */,
+				3BD7E27D25F0BE9500697395 /* TimHortonViewModel.swift */,
+				3BD7E28E25F1838C00697395 /* TimHortonCollectionViewCell.swift */,
+			);
+			path = "Tim Hortons";
 			sourceTree = "<group>";
 		};
 		83B731C8AE90CF7335A400DD /* Frameworks */ = {
@@ -217,10 +256,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B2C6DD325CE06AC004C6ED0 /* Model.swift in Sources */,
+				3BD7E27E25F0BE9500697395 /* TimHortonViewModel.swift in Sources */,
+				3BD7E28F25F1838D00697395 /* TimHortonCollectionViewCell.swift in Sources */,
+				3BD7E27A25F0BE7600697395 /* TimHorthonViewController.swift in Sources */,
 				3B2C6DA325CD3502004C6ED0 /* AppDelegate.swift in Sources */,
 				3B2C6DE325CF4A82004C6ED0 /* TagCollectionViewCell.swift in Sources */,
+				3BD7E28725F0CB8000697395 /* Food.swift in Sources */,
 				3B2C6DDA25CE17BE004C6ED0 /* DefaultData.swift in Sources */,
 				3B2C6DD725CE170B004C6ED0 /* CuisineCollectionViewCell.swift in Sources */,
+				3BD7E28125F0BEB600697395 /* HomeViewController.swift in Sources */,
 				3B2C6DD025CD405D004C6ED0 /* ViewModel.swift in Sources */,
 				3B2C6DA525CD3502004C6ED0 /* SceneDelegate.swift in Sources */,
 				3B2C6DDF25CE93E3004C6ED0 /* MainViewController.swift in Sources */,

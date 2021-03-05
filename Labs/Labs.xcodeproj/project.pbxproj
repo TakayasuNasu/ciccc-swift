@@ -49,6 +49,8 @@
 		3BD7E20525F04FBE00697395 /* PaypalPaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E20425F04FBE00697395 /* PaypalPaymentService.m */; };
 		3BD7E21C25F04FCC00697395 /* StripePaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E21B25F04FCC00697395 /* StripePaymentService.m */; };
 		3BD7E22925F04FD600697395 /* AmazonPaymentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E22825F04FD600697395 /* AmazonPaymentService.m */; };
+		3BD7E24025F07E9000697395 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E23F25F07E8F00697395 /* DeliveryService.m */; };
+		3BD7E24D25F07EC700697395 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E24C25F07EC700697395 /* DeliveryCar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -229,6 +231,10 @@
 		3BD7E21B25F04FCC00697395 /* StripePaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentService.m; sourceTree = "<group>"; };
 		3BD7E22725F04FD600697395 /* AmazonPaymentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazonPaymentService.h; sourceTree = "<group>"; };
 		3BD7E22825F04FD600697395 /* AmazonPaymentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmazonPaymentService.m; sourceTree = "<group>"; };
+		3BD7E23E25F07E8F00697395 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		3BD7E23F25F07E8F00697395 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		3BD7E24B25F07EC700697395 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		3BD7E24C25F07EC700697395 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +454,10 @@
 			children = (
 				3BD7E17525EF3E5A00697395 /* CheeryManager.h */,
 				3BD7E17625EF3E5A00697395 /* CheeryManager.m */,
+				3BD7E24B25F07EC700697395 /* DeliveryCar.h */,
+				3BD7E24C25F07EC700697395 /* DeliveryCar.m */,
+				3BD7E23E25F07E8F00697395 /* DeliveryService.h */,
+				3BD7E23F25F07E8F00697395 /* DeliveryService.m */,
 				3BD7E16A25EF33CA00697395 /* DislikeAnchovieManager.h */,
 				3BD7E16B25EF33CA00697395 /* DislikeAnchovieManager.m */,
 				3BD7E08725EDAE1B00697395 /* Kitchen.h */,
@@ -820,11 +830,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD7E24D25F07EC700697395 /* DeliveryCar.m in Sources */,
 				3BD7E17725EF3E5A00697395 /* CheeryManager.m in Sources */,
 				3BD7E16C25EF33CA00697395 /* DislikeAnchovieManager.m in Sources */,
 				3BD7E09425EDAEDB00697395 /* Pizza.m in Sources */,
 				3BD7E08925EDAE1B00697395 /* Kitchen.m in Sources */,
 				3BD7E07A25EDACD900697395 /* main.m in Sources */,
+				3BD7E24025F07E9000697395 /* DeliveryService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
