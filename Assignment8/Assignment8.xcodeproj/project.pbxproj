@@ -23,7 +23,18 @@
 		3BD7E28125F0BEB600697395 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28025F0BEB600697395 /* HomeViewController.swift */; };
 		3BD7E28725F0CB8000697395 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28625F0CB8000697395 /* Food.swift */; };
 		3BD7E28F25F1838D00697395 /* TimHortonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E28E25F1838C00697395 /* TimHortonCollectionViewCell.swift */; };
+		3BD7E29B25F1DE3000697395 /* Assignment8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7E29A25F1DE3000697395 /* Assignment8Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BD7E29D25F1DE3000697395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B2C6D9725CD3502004C6ED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B2C6D9E25CD3502004C6ED0;
+			remoteInfo = Assignment8;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0BE6D955101C0F077E7B5D56 /* Pods-Assignment8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment8.release.xcconfig"; path = "Target Support Files/Pods-Assignment8/Pods-Assignment8.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +57,9 @@
 		3BD7E28025F0BEB600697395 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BD7E28625F0CB8000697395 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3BD7E28E25F1838C00697395 /* TimHortonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimHortonCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BD7E29825F1DE2F00697395 /* Assignment8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BD7E29A25F1DE3000697395 /* Assignment8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment8Tests.swift; sourceTree = "<group>"; };
+		3BD7E29C25F1DE3000697395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD7E29525F1DE2F00697395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2C6DA125CD3502004C6ED0 /* Assignment8 */,
+				3BD7E29925F1DE3000697395 /* Assignment8Tests */,
 				3B2C6DA025CD3502004C6ED0 /* Products */,
 				BEAB432D1780C3FFA8D29397 /* Pods */,
 				83B731C8AE90CF7335A400DD /* Frameworks */,
@@ -74,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2C6D9F25CD3502004C6ED0 /* Assignment8.app */,
+				3BD7E29825F1DE2F00697395 /* Assignment8Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +148,15 @@
 			path = "Tim Hortons";
 			sourceTree = "<group>";
 		};
+		3BD7E29925F1DE3000697395 /* Assignment8Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7E29A25F1DE3000697395 /* Assignment8Tests.swift */,
+				3BD7E29C25F1DE3000697395 /* Info.plist */,
+			);
+			path = Assignment8Tests;
+			sourceTree = "<group>";
+		};
 		83B731C8AE90CF7335A400DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +196,24 @@
 			productReference = 3B2C6D9F25CD3502004C6ED0 /* Assignment8.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3BD7E29725F1DE2F00697395 /* Assignment8Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BD7E29F25F1DE3000697395 /* Build configuration list for PBXNativeTarget "Assignment8Tests" */;
+			buildPhases = (
+				3BD7E29425F1DE2F00697395 /* Sources */,
+				3BD7E29525F1DE2F00697395 /* Frameworks */,
+				3BD7E29625F1DE2F00697395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BD7E29E25F1DE3000697395 /* PBXTargetDependency */,
+			);
+			name = Assignment8Tests;
+			productName = Assignment8Tests;
+			productReference = 3BD7E29825F1DE2F00697395 /* Assignment8Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +225,10 @@
 				TargetAttributes = {
 					3B2C6D9E25CD3502004C6ED0 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					3BD7E29725F1DE2F00697395 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3B2C6D9E25CD3502004C6ED0;
 					};
 				};
 			};
@@ -192,6 +246,7 @@
 			projectRoot = "";
 			targets = (
 				3B2C6D9E25CD3502004C6ED0 /* Assignment8 */,
+				3BD7E29725F1DE2F00697395 /* Assignment8Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +258,13 @@
 			files = (
 				3B2C6DAF25CD3507004C6ED0 /* LaunchScreen.storyboard in Resources */,
 				3B2C6DAC25CD3507004C6ED0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD7E29625F1DE2F00697395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +333,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BD7E29425F1DE2F00697395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD7E29B25F1DE3000697395 /* Assignment8Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BD7E29E25F1DE3000697395 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B2C6D9E25CD3502004C6ED0 /* Assignment8 */;
+			targetProxy = 3BD7E29D25F1DE3000697395 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B2C6DAD25CD3507004C6ED0 /* LaunchScreen.storyboard */ = {
@@ -443,6 +521,46 @@
 			};
 			name = Release;
 		};
+		3BD7E2A025F1DE3000697395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				INFOPLIST_FILE = Assignment8Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.i-nasu.Assignment8Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment8.app/Assignment8";
+			};
+			name = Debug;
+		};
+		3BD7E2A125F1DE3000697395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				INFOPLIST_FILE = Assignment8Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.i-nasu.Assignment8Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment8.app/Assignment8";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -460,6 +578,15 @@
 			buildConfigurations = (
 				3B2C6DB425CD3507004C6ED0 /* Debug */,
 				3B2C6DB525CD3507004C6ED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BD7E29F25F1DE3000697395 /* Build configuration list for PBXNativeTarget "Assignment8Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD7E2A025F1DE3000697395 /* Debug */,
+				3BD7E2A125F1DE3000697395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

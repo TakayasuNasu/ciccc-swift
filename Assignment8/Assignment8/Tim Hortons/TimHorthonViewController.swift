@@ -20,6 +20,7 @@ class TimHorthonViewController: UIViewController {
     searchController.searchResultsUpdater = self
     searchController.obscuresBackgroundDuringPresentation = false
     searchController.searchBar.placeholder = "Search menu"
+    searchController.searchBar.barTintColor = UIColor(hex: "C8112E")
     definesPresentationContext = true
     return searchController
   }()
@@ -34,14 +35,23 @@ class TimHorthonViewController: UIViewController {
     collectionView.register(
       TimHortonGridCollectionViewCell.self,
       forCellWithReuseIdentifier: TimHortonGridCollectionViewCell.reuseIdentifier)
+    collectionView.register(
+      BasicHeaderView.self,
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+      withReuseIdentifier: TimHortonGridCollectionViewCell.headerReuseIdentifier
+    )
     return collectionView
   }()
 
   // MARK: SnapShort
   var snapShot: NSDiffableDataSourceSnapshot<Food.Category, Food> {
     var snapshot = NSDiffableDataSourceSnapshot<Food.Category, Food>()
-    snapshot.appendSections([Food.Category.donuts])
-    snapshot.appendItems(self.viewModel.foods)
+    for section in Food.Category.allCases {
+      snapshot.appendSections([section])
+      snapshot.appendItems(self.viewModel.foods.filter { food in
+        food.category == section
+      })
+    }
     return snapshot
   }
 
@@ -50,6 +60,10 @@ class TimHorthonViewController: UIViewController {
     super.view.backgroundColor = UIColor(hex: "C8112E")
     super.title = "Tim Horthon"
     super.navigationItem.searchController = self.searchController
+    super.navigationController!.navigationBar.tintColor = .white
+    let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+    super.navigationController?.navigationBar.titleTextAttributes = textAttributes
+    super.navigationController?.navigationBar.barTintColor = UIColor(hex: "C8112E")
     self.setupUI()
     self.createDataSouce()
   }
@@ -96,6 +110,18 @@ extension TimHorthonViewController {
         return cell
       }
     )
+    dataSource.supplementaryViewProvider = {
+      (collectionView: UICollectionView,
+       kind: String,
+       indexPath: IndexPath) -> UICollectionReusableView? in
+      let header = collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: TimHortonGridCollectionViewCell.headerReuseIdentifier,
+        for: indexPath
+      ) as! BasicHeaderView
+      header.label.text = Food.Category.allCases[indexPath.section].rawValue
+      return header
+    }
     self.dataSource.apply(self.snapShot)
   }
 
@@ -121,7 +147,17 @@ extension TimHorthonViewController {
     group.contentInsets = NSDirectionalEdgeInsets(top: spacing, leading: 0, bottom: 0, trailing: 0)
 
     let section = NSCollectionLayoutSection(group: group)
-    section.interGroupSpacing = spacing
+    let headerSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .absolute(35)
+    )
+    let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+      layoutSize: headerSize,
+      elementKind: UICollectionView.elementKindSectionHeader,
+      alignment: .top
+    )
+
+    section.boundarySupplementaryItems = [sectionHeader]
 
     return UICollectionViewCompositionalLayout(section: section)
   }

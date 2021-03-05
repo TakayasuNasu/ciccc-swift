@@ -11,6 +11,7 @@ import SnapKit
 class TimHortonGridCollectionViewCell: UICollectionViewCell {
 
   static let reuseIdentifier: String = "grid"
+  static let headerReuseIdentifier = "HeaderStateCell"
   let viewModel = TimHortonViewModel()
 
   let thumbnail: UIImageView = {
@@ -49,8 +50,8 @@ class TimHortonGridCollectionViewCell: UICollectionViewCell {
     self.stackView.addArrangedSubview(self.thumbnail)
     self.stackView.addArrangedSubview(name)
     self.stackView.addArrangedSubview(category)
-//    self.stackView.addArrangedSubview(time)
-//    self.stackView.addArrangedSubview(price)
+    //    self.stackView.addArrangedSubview(time)
+    //    self.stackView.addArrangedSubview(price)
 
     self.thumbnail.snp.makeConstraints { make -> Void in
       make.top.equalToSuperview()
@@ -78,5 +79,24 @@ class TimHortonGridCollectionViewCell: UICollectionViewCell {
 class TimHortonListCollectionViewCell: UICollectionViewCell {
 
   static let reuseIdentifier: String = "list"
+
+}
+
+class BasicHeaderView: UICollectionReusableView {
+
+  let label = UILabel()
+
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    addSubview(label)
+    backgroundColor = .white
+    self.label.snp.makeConstraints { make -> Void in
+      make.center.equalToSuperview()
+    }
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
 }
