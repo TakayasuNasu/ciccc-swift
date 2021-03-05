@@ -7,12 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "Kitchen.h"
+#import "DeliveryService.h"
+#import "DeliveryCar.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
     NSLog(@"Please pick your pizza size and toppings:");
 
     Kitchen *restaurantKitchen = [Kitchen new];
+    DeliveryService *deliveryService = [DeliveryService new];
+    DeliveryCar *deliveryCar = [DeliveryCar new];
+    [deliveryService setDeliveryCar:deliveryCar];
 
     while (TRUE) {
 
