@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B60219C25F820C900DC019C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60219B25F820C900DC019C /* main.swift */; };
-		3B6021A525F8211600DC019C /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6021A425F8211600DC019C /* Recursion.swift */; };
-		3B6021AB25F836EE00DC019C /* RecursionAssignment1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6021AA25F836EE00DC019C /* RecursionAssignment1.swift */; };
-		3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2F225F9765B00A5C50C /* ExhaustiveSearch.swift */; };
-		3B79D2FB25F9819000A5C50C /* Leetcode01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2FA25F9819000A5C50C /* Leetcode01.swift */; };
-		3B79D2FE25FAC6C300A5C50C /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2FD25FAC6C300A5C50C /* BackTracking.swift */; };
+		3B79D30E25FAFA4B00A5C50C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D30D25FAFA4B00A5C50C /* main.swift */; };
+		3B79D31625FAFC8C00A5C50C /* Crawl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D31525FAFC8C00A5C50C /* Crawl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3B60219625F820C900DC019C /* CopyFiles */ = {
+		3B79D30825FAFA4B00A5C50C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -28,18 +24,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B60219825F820C900DC019C /* AlgorithmDataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmDataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B60219B25F820C900DC019C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3B6021A425F8211600DC019C /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
-		3B6021A825F8301200DC019C /* provinces.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = provinces.txt; sourceTree = "<group>"; };
-		3B6021AA25F836EE00DC019C /* RecursionAssignment1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionAssignment1.swift; sourceTree = "<group>"; };
-		3B79D2F225F9765B00A5C50C /* ExhaustiveSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhaustiveSearch.swift; sourceTree = "<group>"; };
-		3B79D2FA25F9819000A5C50C /* Leetcode01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leetcode01.swift; sourceTree = "<group>"; };
-		3B79D2FD25FAC6C300A5C50C /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
+		3B79D30A25FAFA4B00A5C50C /* MiniProjectCrawl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MiniProjectCrawl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B79D30D25FAFA4B00A5C50C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3B79D31525FAFC8C00A5C50C /* Crawl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B60219525F820C900DC019C /* Frameworks */ = {
+		3B79D30725FAFA4B00A5C50C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,79 +40,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B60218F25F820C900DC019C = {
+		3B79D30125FAFA4B00A5C50C = {
 			isa = PBXGroup;
 			children = (
-				3B60219A25F820C900DC019C /* AlgorithmDataStructure */,
-				3B60219925F820C900DC019C /* Products */,
+				3B79D30C25FAFA4B00A5C50C /* MiniProjectCrawl */,
+				3B79D30B25FAFA4B00A5C50C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B60219925F820C900DC019C /* Products */ = {
+		3B79D30B25FAFA4B00A5C50C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B60219825F820C900DC019C /* AlgorithmDataStructure */,
+				3B79D30A25FAFA4B00A5C50C /* MiniProjectCrawl */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B60219A25F820C900DC019C /* AlgorithmDataStructure */ = {
+		3B79D30C25FAFA4B00A5C50C /* MiniProjectCrawl */ = {
 			isa = PBXGroup;
 			children = (
-				3B6021A325F8210800DC019C /* Recursion */,
-				3B60219B25F820C900DC019C /* main.swift */,
-				3B79D2FA25F9819000A5C50C /* Leetcode01.swift */,
+				3B79D30D25FAFA4B00A5C50C /* main.swift */,
+				3B79D31525FAFC8C00A5C50C /* Crawl.swift */,
 			);
-			path = AlgorithmDataStructure;
-			sourceTree = "<group>";
-		};
-		3B6021A325F8210800DC019C /* Recursion */ = {
-			isa = PBXGroup;
-			children = (
-				3B6021A425F8211600DC019C /* Recursion.swift */,
-				3B6021A825F8301200DC019C /* provinces.txt */,
-				3B6021AA25F836EE00DC019C /* RecursionAssignment1.swift */,
-				3B79D2F225F9765B00A5C50C /* ExhaustiveSearch.swift */,
-				3B79D2FD25FAC6C300A5C50C /* BackTracking.swift */,
-			);
-			path = Recursion;
+			path = MiniProjectCrawl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B60219725F820C900DC019C /* AlgorithmDataStructure */ = {
+		3B79D30925FAFA4B00A5C50C /* MiniProjectCrawl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B60219F25F820C900DC019C /* Build configuration list for PBXNativeTarget "AlgorithmDataStructure" */;
+			buildConfigurationList = 3B79D31125FAFA4B00A5C50C /* Build configuration list for PBXNativeTarget "MiniProjectCrawl" */;
 			buildPhases = (
-				3B60219425F820C900DC019C /* Sources */,
-				3B60219525F820C900DC019C /* Frameworks */,
-				3B60219625F820C900DC019C /* CopyFiles */,
+				3B79D30625FAFA4B00A5C50C /* Sources */,
+				3B79D30725FAFA4B00A5C50C /* Frameworks */,
+				3B79D30825FAFA4B00A5C50C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AlgorithmDataStructure;
-			productName = AlgorithmDataStructure;
-			productReference = 3B60219825F820C900DC019C /* AlgorithmDataStructure */;
+			name = MiniProjectCrawl;
+			productName = MiniProjectCrawl;
+			productReference = 3B79D30A25FAFA4B00A5C50C /* MiniProjectCrawl */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B60219025F820C900DC019C /* Project object */ = {
+		3B79D30225FAFA4B00A5C50C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					3B60219725F820C900DC019C = {
+					3B79D30925FAFA4B00A5C50C = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = 3B60219325F820C900DC019C /* Build configuration list for PBXProject "AlgorithmDataStructure" */;
+			buildConfigurationList = 3B79D30525FAFA4B00A5C50C /* Build configuration list for PBXProject "MiniProjectCrawl" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,34 +107,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 3B60218F25F820C900DC019C;
-			productRefGroup = 3B60219925F820C900DC019C /* Products */;
+			mainGroup = 3B79D30125FAFA4B00A5C50C;
+			productRefGroup = 3B79D30B25FAFA4B00A5C50C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B60219725F820C900DC019C /* AlgorithmDataStructure */,
+				3B79D30925FAFA4B00A5C50C /* MiniProjectCrawl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B60219425F820C900DC019C /* Sources */ = {
+		3B79D30625FAFA4B00A5C50C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B79D2FE25FAC6C300A5C50C /* BackTracking.swift in Sources */,
-				3B6021A525F8211600DC019C /* Recursion.swift in Sources */,
-				3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */,
-				3B60219C25F820C900DC019C /* main.swift in Sources */,
-				3B6021AB25F836EE00DC019C /* RecursionAssignment1.swift in Sources */,
-				3B79D2FB25F9819000A5C50C /* Leetcode01.swift in Sources */,
+				3B79D30E25FAFA4B00A5C50C /* main.swift in Sources */,
+				3B79D31625FAFC8C00A5C50C /* Crawl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3B60219D25F820C900DC019C /* Debug */ = {
+		3B79D30F25FAFA4B00A5C50C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +191,7 @@
 			};
 			name = Debug;
 		};
-		3B60219E25F820C900DC019C /* Release */ = {
+		3B79D31025FAFA4B00A5C50C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,7 +245,7 @@
 			};
 			name = Release;
 		};
-		3B6021A025F820C900DC019C /* Debug */ = {
+		3B79D31225FAFA4B00A5C50C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -282,7 +256,7 @@
 			};
 			name = Debug;
 		};
-		3B6021A125F820C900DC019C /* Release */ = {
+		3B79D31325FAFA4B00A5C50C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -296,25 +270,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B60219325F820C900DC019C /* Build configuration list for PBXProject "AlgorithmDataStructure" */ = {
+		3B79D30525FAFA4B00A5C50C /* Build configuration list for PBXProject "MiniProjectCrawl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B60219D25F820C900DC019C /* Debug */,
-				3B60219E25F820C900DC019C /* Release */,
+				3B79D30F25FAFA4B00A5C50C /* Debug */,
+				3B79D31025FAFA4B00A5C50C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B60219F25F820C900DC019C /* Build configuration list for PBXNativeTarget "AlgorithmDataStructure" */ = {
+		3B79D31125FAFA4B00A5C50C /* Build configuration list for PBXNativeTarget "MiniProjectCrawl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B6021A025F820C900DC019C /* Debug */,
-				3B6021A125F820C900DC019C /* Release */,
+				3B79D31225FAFA4B00A5C50C /* Debug */,
+				3B79D31325FAFA4B00A5C50C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B60219025F820C900DC019C /* Project object */;
+	rootObject = 3B79D30225FAFA4B00A5C50C /* Project object */;
 }
