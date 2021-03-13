@@ -23,7 +23,9 @@ import Foundation
 
 // func rollDiceSum(n: Int, desiredSum: Int)
 //rollDiceSum(n: 2, desiredSum: 4)
-rollDiceSumNoDuplicate(n: 3, desiredSum: 12)
+//rollDiceSumNoDuplicate(n: 3, desiredSum: 12)
+let sortedList = quickSort([8,2,10,6,5,7,1,9,4,11,3], { $0 <= $1 })
+print(sortedList)
 
 
 extension String {

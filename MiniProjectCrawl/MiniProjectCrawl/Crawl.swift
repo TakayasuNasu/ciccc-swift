@@ -7,6 +7,10 @@
 
 import Foundation
 
+// following command to test and build original command.
+// cat  Crawl.swift main.swift  | swift -
+// swiftc main.swift Crawl.swift -o xTree
+
 enum Symbol: String {
   case blank = "   "
   case vertical = "│  "
