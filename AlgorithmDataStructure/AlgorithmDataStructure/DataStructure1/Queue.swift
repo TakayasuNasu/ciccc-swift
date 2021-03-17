@@ -7,11 +7,11 @@
 
 import Foundation
 
-public final class Bag<E>: Sequence {
+
+public final class Queue<E>: Sequence {
 
   private var first: Node<E>? = nil
-
-  // getter is public, setter is private.
+  private var last: Node<E>? = nil
   private(set) var count: Int = 0
 
   fileprivate class Node<E> {
@@ -25,21 +25,7 @@ public final class Bag<E>: Sequence {
     }
   }
 
-  public init() {
-
-  }
-
-  public func isEmpty() -> Bool {
-    return self.count == 0
-  }
-
-  public func add(item: E) {
-    let oldFirst = first
-    first = Node<E>(item: item, next: oldFirst)
-    count += 1
-  }
-
-  public struct BagIterator<E> : IteratorProtocol {
+  public struct QueueIterator<E>: IteratorProtocol {
     public typealias Element = E
 
     private var current: Node<E>?
@@ -57,13 +43,47 @@ public final class Bag<E>: Sequence {
     }
   }
 
-  public func makeIterator() -> BagIterator<E> {
-    return BagIterator<E>(first)
+  public init() {}
+
+  public func isEmpty() -> Bool {
+    return self.count == 0
+  }
+
+  public func peek() -> E? {
+    return self.first?.item
+  }
+
+  public func makeIterator() -> QueueIterator<E> {
+    return QueueIterator<E>(self.first)
+  }
+
+  public func enqueue(item: E) {
+    let oldLast = self.last
+    let last = Node<E>(item: item, next: nil)
+    if self.isEmpty() {
+      self.first = last
+    } else {
+      oldLast?.next = last
+    }
+    count += 1
+  }
+
+  public func dequeue() -> E? {
+    if self.isEmpty() {
+      fatalError("Queue is no existing.")
+    }
+    let firstItem = self.first?.item
+    self.first = first?.next
+    count -= 1
+    if self.isEmpty() {
+      self.last = nil
+    }
+    return firstItem
   }
 
 }
 
-extension Bag: CustomStringConvertible {
+extension Queue: CustomStringConvertible {
   public var description: String {
     return self.reduce(into: "") { $0 += "\($1), " }
   }
