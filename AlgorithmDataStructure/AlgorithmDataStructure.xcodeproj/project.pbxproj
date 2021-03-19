@@ -20,6 +20,8 @@
 		3BF4F5C325FFF6FF0088E399 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5C225FFF6FF0088E399 /* Stack.swift */; };
 		3BF4F5C625FFF7140088E399 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5C525FFF7140088E399 /* Queue.swift */; };
 		3BF4F5CA260163F60088E399 /* TreeTraversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5C9260163F60088E399 /* TreeTraversal.swift */; };
+		3BF4F5EB2603FDD90088E399 /* IndexPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5EA2603FDD90088E399 /* IndexPriorityQueue.swift */; };
+		3BF4F5EE260401DA0088E399 /* TreeQuize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5ED260401DA0088E399 /* TreeQuize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +52,8 @@
 		3BF4F5C225FFF6FF0088E399 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		3BF4F5C525FFF7140088E399 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		3BF4F5C9260163F60088E399 /* TreeTraversal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTraversal.swift; sourceTree = "<group>"; };
+		3BF4F5EA2603FDD90088E399 /* IndexPriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPriorityQueue.swift; sourceTree = "<group>"; };
+		3BF4F5ED260401DA0088E399 /* TreeQuize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeQuize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				3BF4F5C9260163F60088E399 /* TreeTraversal.swift */,
+				3BF4F5EA2603FDD90088E399 /* IndexPriorityQueue.swift */,
+				3BF4F5ED260401DA0088E399 /* TreeQuize.swift */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -190,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF4F5BF25FFF6F70088E399 /* Bag.swift in Sources */,
+				3BF4F5EE260401DA0088E399 /* TreeQuize.swift in Sources */,
 				3B79D2FE25FAC6C300A5C50C /* BackTracking.swift in Sources */,
+				3BF4F5EB2603FDD90088E399 /* IndexPriorityQueue.swift in Sources */,
 				3B6021A525F8211600DC019C /* Recursion.swift in Sources */,
 				3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */,
 				3B60219C25F820C900DC019C /* main.swift in Sources */,
