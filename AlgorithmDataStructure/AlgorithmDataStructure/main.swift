@@ -27,7 +27,8 @@ import Foundation
 //let sortedList = quickSort([8,2,10,6,5,7,1,9,4,11,3], { $0 <= $1 })
 //print(sortedList)
 
-treeTraversalForTreeQuize()
+//treeTraversalForTreeQuize()
+diameterForTreeQuize()
 
 
 extension String {

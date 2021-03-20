@@ -52,3 +52,31 @@ func treeTraversalForTreeQuize() {
   inOrder(0)
 }
 
+
+func diameterForTreeQuize() {
+//  let input = [[1,3],[2,4],[3,1],[4,2],[5,4]]
+  var tree = [[Int]](repeating: [Int](repeating: 0, count: 0), count: 5)
+  tree[1 - 1].append(3)
+  tree[3 - 1].append(1)
+
+  tree[2 - 1].append(4)
+  tree[4 - 1].append(2)
+
+  tree[3 - 1].append(4)
+  tree[4 - 1].append(3)
+
+  tree[5 - 1].append(4)
+  tree[4 - 1].append(5)
+
+
+  func dfs(_ list: [[Int]], _ node: Int, _ arrival: Int) {
+    for i in 0..<list[node - 1].count {
+      if list[node - 1][i] != arrival {
+        print(list[node - 1][i], ": \(node)")
+        dfs(list, list[node - 1][i], node)
+      }
+    }
+  }
+
+  dfs(tree, 1, 0)
+}
