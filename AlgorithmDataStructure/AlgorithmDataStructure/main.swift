@@ -28,8 +28,9 @@ import Foundation
 //print(sortedList)
 
 //treeTraversalForTreeQuize()
-diameterForTreeQuize()
-
+//diameterForTreeQuize()
+//BMSerch()
+lowestCommonAncestor()
 
 extension String {
   subscript(index: Int) -> String {
