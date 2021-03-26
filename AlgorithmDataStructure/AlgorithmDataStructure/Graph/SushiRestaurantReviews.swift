@@ -10,10 +10,23 @@ import Foundation
 func sushiRestaurant() {
 
   var store: [[Int]] = []
+  let firstLine: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
+  let realSushiRestaurants: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
+//  let realSushiRestaurants: [Int] = [5,2]
+
+
+  func didVisitNecessaryRestaulant(_ visited: [Int]) -> Bool {
+    for restaurant in realSushiRestaurants {
+      if !visited.contains(restaurant) {
+        return false
+      }
+    }
+    return true
+  }
 
   func checkVisited(_ visited: [Int], _ store: inout [[Int]]) {
-    if visited.contains(6) && visited.contains(4) && visited.contains(7) {
-      store.append(visited)
+    if didVisitNecessaryRestaulant(visited) {
+      store.append([Int](visited[0..<visited.count - 1]))
     }
   }
 
@@ -25,15 +38,20 @@ func sushiRestaurant() {
       let last = visited.last!
       visited.append(i)
       dfs(vertex: i, &restaurantMap, &stack, &visited)
-      if visited.count < 8 {
-        visited.append(last)
-      }
+      visited.append(last)
       checkVisited(visited, &store)
     }
   }
 
-  let input: [[Int]] = [[0,1],[0,2],[2,3],[4,3],[6,1],[1,5],[7,3]]
-  let n = 8
+  let n = firstLine[0]
+  //  let input: [[Int]] = [[0,1],[0,2],[2,3],[4,3],[6,1],[1,5],[7,3]]
+  var input: [[Int]] = [[Int]](repeating: [Int](repeating: 0, count: 2), count: n)
+  for i in 0..<n - 1 {
+    let edge = readLine()!.split(separator: " ").map { Int($0)! }
+    input[i][0] = edge[0]
+    input[i][1] = edge[1]
+  }
+
   var restaurantMap = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
   for i in 0..<n - 1 {
     let row = input[i][0]
