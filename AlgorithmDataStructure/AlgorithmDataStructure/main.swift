@@ -38,6 +38,7 @@ import Foundation
 //cyclicPermutation()
 //repeatingSequence()
 sushiRestaurant()
+//sushiRestaurantForCheck()
 
 
 extension String {

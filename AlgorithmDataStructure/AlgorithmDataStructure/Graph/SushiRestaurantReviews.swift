@@ -12,7 +12,6 @@ func sushiRestaurant() {
   var store: [[Int]] = []
   let firstLine: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
   let realSushiRestaurants: [Int] = readLine()!.split(separator: " ").map { Int($0)! }
-//  let realSushiRestaurants: [Int] = [5,2]
 
 
   func didVisitNecessaryRestaulant(_ visited: [Int]) -> Bool {
@@ -30,21 +29,46 @@ func sushiRestaurant() {
     }
   }
 
-  func dfs(vertex: Int, _ restaurantMap: inout [[Int]], _ stack: inout [Bool], _ visited: inout [Int]) {
-    stack[vertex] = true
-    for (i,v) in restaurantMap[vertex].enumerated() {
-      if v == 0 { continue }
-      if stack[i] { continue }
-      let last = visited.last!
-      visited.append(i)
-      dfs(vertex: i, &restaurantMap, &stack, &visited)
-      visited.append(last)
+  func dfs(lastVisited: Int, _ restaurantMap: inout [[Int]], _ stack: inout [Bool], _ visited: inout [Int]) {
+    stack[lastVisited] = true
+    for (col,zeroOrOne) in restaurantMap[lastVisited].enumerated() {
+      if zeroOrOne == 0 { continue }
+      if stack[col] { continue }
+      visited.append(col)
+      dfs(lastVisited: col, &restaurantMap, &stack, &visited)
+      if stack.filter({ $0 }).count > 1 {
+        visited.append(lastVisited)
+      }
       checkVisited(visited, &store)
     }
   }
 
+  func optimizeMap(_ row: Int, _ restaurantMap: inout [[Int]], _ fakeRestaurants: [Int]) {
+    if row == restaurantMap.count { return }
+    for (col, _) in restaurantMap[row].enumerated() {
+      if fakeRestaurants.contains(col) {
+        restaurantMap[row][col] = 0
+      }
+    }
+    optimizeMap(row + 1, &restaurantMap, fakeRestaurants)
+  }
+
+  func getFakaRestaurants(_ restaurantMap: [[Int]], _ skip: [Int]) -> [Int] {
+    var fakeRestaurants: [Int] = []
+    for (i,row) in restaurantMap.enumerated() {
+      if skip.contains(i) { continue }
+      var count = 0
+      for n in row {
+        if n == 1 {
+          count += 1
+        }
+      }
+      if count < 2 { fakeRestaurants.append(i) }
+    }
+    return fakeRestaurants
+  }
+
   let n = firstLine[0]
-  //  let input: [[Int]] = [[0,1],[0,2],[2,3],[4,3],[6,1],[1,5],[7,3]]
   var input: [[Int]] = [[Int]](repeating: [Int](repeating: 0, count: 2), count: n)
   for i in 0..<n - 1 {
     let edge = readLine()!.split(separator: " ").map { Int($0)! }
@@ -60,6 +84,12 @@ func sushiRestaurant() {
     restaurantMap[col][row] = 1
   }
 
+  let fakeRestaurants = getFakaRestaurants(restaurantMap, realSushiRestaurants)
+
+  print(fakeRestaurants)
+
+  optimizeMap(0, &restaurantMap, fakeRestaurants)
+
   for row in restaurantMap {
     print(row)
   }
@@ -70,7 +100,7 @@ func sushiRestaurant() {
   var visited: [Int] = []
   for row in 0..<n {
     visited.append(row)
-    dfs(vertex: row, &restaurantMap, &stack, &visited)
+    dfs(lastVisited: row, &restaurantMap, &stack, &visited)
     visited.removeAll()
     stack = [Bool](repeating: false, count: n)
   }
@@ -86,6 +116,87 @@ func sushiRestaurant() {
   }
   print()
   print(minRoad)
-  print(minRoad.count)
+  print(minRoad.count - 1)
+
+}
+
+func sushiRestaurantForCheck() {
+
+  func dfs(vertex: Int, _ restaurantMap: inout [[Int]], _ visited: inout [Bool]) {
+    visited[vertex] = true
+    for (col,v) in restaurantMap[vertex].enumerated() {
+      if v == 0 { continue }
+      if visited[col] { continue }
+      print(col, terminator: " ")
+      dfs(vertex: col, &restaurantMap, &visited)
+      print("-> \(vertex)")
+      print()
+    }
+  }
+
+
+  func prepare(_ n: Int) -> [[Int]] {
+    let input: [[Int]] = [[7, 6], [7, 2], [8, 3], [1, 2], [2, 5], [3, 4], [0, 6], [2, 3], [0, 0]]
+
+    print(input)
+    print()
+
+    var restaurantMap = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
+    for i in 0..<n - 1 {
+      let row = input[i][0]
+      let col = input[i][1]
+      restaurantMap[row][col] = 1
+      restaurantMap[col][row] = 1
+    }
+    return restaurantMap
+  }
+
+  func optimizeMap(_ row: Int, _ restaurantMap: inout [[Int]], _ fakeRestaurants: [Int]) {
+    if row == restaurantMap.count { return }
+    for (col, _) in restaurantMap[row].enumerated() {
+      if fakeRestaurants.contains(col) {
+        restaurantMap[row][col] = 0
+      }
+    }
+    optimizeMap(row + 1, &restaurantMap, fakeRestaurants)
+  }
+
+  func getFakaRestaurants(_ restaurantMap: [[Int]], _ skip: [Int]) -> [Int] {
+    var fakeRestaurants: [Int] = []
+    for (i,row) in restaurantMap.enumerated() {
+      if skip.contains(i) { continue }
+      var count = 0
+      for n in row {
+        if n == 1 {
+          count += 1
+        }
+      }
+      if count < 2 { fakeRestaurants.append(i) }
+    }
+    return fakeRestaurants
+  }
+
+  let n = 9
+  var restaurantMap = prepare(n)
+
+  let fakeRestaurants = getFakaRestaurants(restaurantMap, [0,8,1])
+
+  print(fakeRestaurants)
+
+  optimizeMap(0, &restaurantMap, fakeRestaurants)
+
+  print()
+
+  for row in restaurantMap {
+    print(row)
+  }
+
+  print()
+
+  var visited = [Bool](repeating: false, count: n + 1)
+  for v in 0..<n {
+    print(v, terminator: " ")
+    dfs(vertex: v, &restaurantMap, &visited)
+  }
 
 }
