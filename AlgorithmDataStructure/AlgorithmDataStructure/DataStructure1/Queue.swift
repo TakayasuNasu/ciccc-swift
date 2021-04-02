@@ -59,7 +59,7 @@ public final class Queue<E>: Sequence {
 
   public func enqueue(item: E) {
     let oldLast = self.last
-    let last = Node<E>(item: item, next: nil)
+    self.last = Node<E>(item: item, next: nil)
     if self.isEmpty() {
       self.first = last
     } else {

@@ -37,8 +37,9 @@ import Foundation
 //print(parents)
 //cyclicPermutation()
 //repeatingSequence()
-sushiRestaurant()
+//sushiRestaurant()
 //sushiRestaurantForCheck()
+tomatoFarm()
 
 
 extension String {

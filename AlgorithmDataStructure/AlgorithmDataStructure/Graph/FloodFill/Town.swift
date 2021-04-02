@@ -12,26 +12,26 @@ func town() {
     let x: Int
     let y: Int
   }
-  
+
   let dx = [0, 0, 1, -1]
   let dy = [1, -1, 0, 0]
-  
+
   var townMap = [[Int]]()
   var coloredMap = [[Int]](repeating: [Int](repeating: 0, count: 25), count: 25)
   var houses = [Int](repeating: 0, count: 25 * 25) // the number of houses for each town (index)
-  
+
   let n = Int(readLine()!)!
   for _ in 0..<n {
     let row = readLine()!.map { Int(String($0))! }
     townMap.append(row)
   }
-  
+
   func bfs(square: Square, id: Int) {
     let q = Queue<Square>()
     q.enqueue(item: square)
     coloredMap[square.x][square.y] = id
     houses[id] += 1
-    
+
     while !q.isEmpty() {
       let sq = q.dequeue()!
       let x = sq.x
@@ -50,7 +50,7 @@ func town() {
       }
     }
   }
-  
+
   var id = 0
   for x in 0..<n {
     for y in 0..<n {
@@ -60,7 +60,7 @@ func town() {
       }
     }
   }
-  
+
   print(id) // the number of towns
   houses = Array(houses[1...id]) // getting the sub array from index 1 to id
   houses.sort()
