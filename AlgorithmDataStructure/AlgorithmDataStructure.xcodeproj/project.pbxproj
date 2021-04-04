@@ -35,6 +35,7 @@
 		3BF4F62A260BD4F80088E399 /* SushiRestaurantReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F629260BD4F80088E399 /* SushiRestaurantReviews.swift */; };
 		3BF4F62E260BE8A10088E399 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F62D260BE8A10088E399 /* Town.swift */; };
 		3BF4F657261308160088E399 /* TomatoFarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F656261308150088E399 /* TomatoFarm.swift */; };
+		3BF4F6A2261909E60088E399 /* Bridges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F6A1261909E60088E399 /* Bridges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,7 @@
 		3BF4F629260BD4F80088E399 /* SushiRestaurantReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiRestaurantReviews.swift; sourceTree = "<group>"; };
 		3BF4F62D260BE8A10088E399 /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		3BF4F656261308150088E399 /* TomatoFarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoFarm.swift; sourceTree = "<group>"; };
+		3BF4F6A1261909E60088E399 /* Bridges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				3BF4F624260B12430088E399 /* CyclicPermutation.swift */,
 				3BF4F629260BD4F80088E399 /* SushiRestaurantReviews.swift */,
 				3BF4F656261308150088E399 /* TomatoFarm.swift */,
+				3BF4F6A1261909E60088E399 /* Bridges.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				3B4E157425FC114E008BAFF0 /* Sorting.swift in Sources */,
 				3BF4F62E260BE8A10088E399 /* Town.swift in Sources */,
 				3B79D2FB25F9819000A5C50C /* Leetcode01.swift in Sources */,
+				3BF4F6A2261909E60088E399 /* Bridges.swift in Sources */,
 				3BF4F617260A94F70088E399 /* BFS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

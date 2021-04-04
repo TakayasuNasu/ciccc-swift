@@ -39,7 +39,8 @@ import Foundation
 //repeatingSequence()
 //sushiRestaurant()
 //sushiRestaurantForCheck()
-tomatoFarm()
+//tomatoFarm()
+bridges()
 
 
 extension String {
