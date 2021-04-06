@@ -40,7 +40,8 @@ import Foundation
 //sushiRestaurant()
 //sushiRestaurantForCheck()
 //tomatoFarm()
-bridges()
+//bridges()
+sushiSolution()
 
 
 extension String {
