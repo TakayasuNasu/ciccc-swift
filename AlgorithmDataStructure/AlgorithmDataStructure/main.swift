@@ -42,7 +42,8 @@ import Foundation
 //tomatoFarm()
 //bridges()
 //sushiSolution()
-courseSchedule()
+//courseSchedule()
+courseScheduleSecond()
 
 
 
