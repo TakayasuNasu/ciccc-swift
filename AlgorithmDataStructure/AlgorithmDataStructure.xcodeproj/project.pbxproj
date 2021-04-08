@@ -130,8 +130,8 @@
 		3B60219A25F820C900DC019C /* AlgorithmDataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				3BF4F60B260A851B0088E399 /* Graph */,
 				3BF4F5BD25FFF6E40088E399 /* DataStructure1 */,
+				3BF4F60B260A851B0088E399 /* Graph */,
 				3B79D2FA25F9819000A5C50C /* Leetcode01.swift */,
 				3B60219B25F820C900DC019C /* main.swift */,
 				3B6021A325F8210800DC019C /* Recursion */,
@@ -171,7 +171,6 @@
 				3BF4F5F8260588EB0088E399 /* SubstringPattern.swift */,
 				3BF4F5ED260401DA0088E399 /* TreeQuize.swift */,
 				3BF4F5C9260163F60088E399 /* TreeTraversal.swift */,
-				3BF4F61C260ABBFF0088E399 /* UF.swift */,
 			);
 			path = Tree;
 			sourceTree = "<group>";
@@ -179,14 +178,15 @@
 		3BF4F60B260A851B0088E399 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				3BF4F6AC261D0D680088E399 /* TopologicalSort */,
-				3BF4F62C260BE8940088E399 /* FloodFill */,
-				3BF4F60C260A85390088E399 /* Example */,
+				3BF4F6A1261909E60088E399 /* Bridges.swift */,
 				3BF4F624260B12430088E399 /* CyclicPermutation.swift */,
+				3BF4F60C260A85390088E399 /* Example */,
+				3BF4F62C260BE8940088E399 /* FloodFill */,
 				3BF4F629260BD4F80088E399 /* SushiRestaurantReviews.swift */,
 				3BF4F6A8261A79780088E399 /* SushiSolution.swift */,
 				3BF4F656261308150088E399 /* TomatoFarm.swift */,
-				3BF4F6A1261909E60088E399 /* Bridges.swift */,
+				3BF4F6AC261D0D680088E399 /* TopologicalSort */,
+				3BF4F6B8261E84720088E399 /* UnionFind */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -219,6 +219,14 @@
 				3BF4F6B1261D2B820088E399 /* CourseSchedule.swift */,
 			);
 			path = TopologicalSort;
+			sourceTree = "<group>";
+		};
+		3BF4F6B8261E84720088E399 /* UnionFind */ = {
+			isa = PBXGroup;
+			children = (
+				3BF4F61C260ABBFF0088E399 /* UF.swift */,
+			);
+			path = UnionFind;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
