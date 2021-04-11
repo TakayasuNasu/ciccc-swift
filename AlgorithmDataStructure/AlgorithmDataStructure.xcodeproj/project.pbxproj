@@ -16,6 +16,9 @@
 		3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2F225F9765B00A5C50C /* ExhaustiveSearch.swift */; };
 		3B79D2FB25F9819000A5C50C /* Leetcode01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2FA25F9819000A5C50C /* Leetcode01.swift */; };
 		3B79D2FE25FAC6C300A5C50C /* BackTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B79D2FD25FAC6C300A5C50C /* BackTracking.swift */; };
+		3BE4AA0E261F883400186150 /* SushiIterative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4AA0D261F883400186150 /* SushiIterative.swift */; };
+		3BE4AA12261FC7A000186150 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4AA11261FC7A000186150 /* Assignment.swift */; };
+		3BE4AA172620F28400186150 /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4AA162620F28400186150 /* MST.swift */; };
 		3BF4F5BF25FFF6F70088E399 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5BE25FFF6F70088E399 /* Bag.swift */; };
 		3BF4F5C325FFF6FF0088E399 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5C225FFF6FF0088E399 /* Stack.swift */; };
 		3BF4F5C625FFF7140088E399 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF4F5C525FFF7140088E399 /* Queue.swift */; };
@@ -65,6 +68,9 @@
 		3B79D2F225F9765B00A5C50C /* ExhaustiveSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhaustiveSearch.swift; sourceTree = "<group>"; };
 		3B79D2FA25F9819000A5C50C /* Leetcode01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leetcode01.swift; sourceTree = "<group>"; };
 		3B79D2FD25FAC6C300A5C50C /* BackTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTracking.swift; sourceTree = "<group>"; };
+		3BE4AA0D261F883400186150 /* SushiIterative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SushiIterative.swift; sourceTree = "<group>"; };
+		3BE4AA11261FC7A000186150 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		3BE4AA162620F28400186150 /* MST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MST.swift; sourceTree = "<group>"; };
 		3BF4F5BE25FFF6F70088E399 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		3BF4F5C225FFF6FF0088E399 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		3BF4F5C525FFF7140088E399 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -153,6 +159,15 @@
 			path = Recursion;
 			sourceTree = "<group>";
 		};
+		3BE4AA10261FC78700186150 /* Greedy */ = {
+			isa = PBXGroup;
+			children = (
+				3BE4AA11261FC7A000186150 /* Assignment.swift */,
+				3BE4AA162620F28400186150 /* MST.swift */,
+			);
+			path = Greedy;
+			sourceTree = "<group>";
+		};
 		3BF4F5BD25FFF6E40088E399 /* DataStructure1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +197,8 @@
 				3BF4F624260B12430088E399 /* CyclicPermutation.swift */,
 				3BF4F60C260A85390088E399 /* Example */,
 				3BF4F62C260BE8940088E399 /* FloodFill */,
+				3BE4AA10261FC78700186150 /* Greedy */,
+				3BE4AA0D261F883400186150 /* SushiIterative.swift */,
 				3BF4F629260BD4F80088E399 /* SushiRestaurantReviews.swift */,
 				3BF4F6A8261A79780088E399 /* SushiSolution.swift */,
 				3BF4F656261308150088E399 /* TomatoFarm.swift */,
@@ -286,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE4AA12261FC7A000186150 /* Assignment.swift in Sources */,
 				3BF4F5F9260588EB0088E399 /* SubstringPattern.swift in Sources */,
 				3BF4F5BF25FFF6F70088E399 /* Bag.swift in Sources */,
 				3BF4F5EE260401DA0088E399 /* TreeQuize.swift in Sources */,
@@ -295,6 +313,7 @@
 				3BF4F60E260A856D0088E399 /* AdjacencyMatrix.swift in Sources */,
 				3BF4F62A260BD4F80088E399 /* SushiRestaurantReviews.swift in Sources */,
 				3BF4F5EB2603FDD90088E399 /* IndexPriorityQueue.swift in Sources */,
+				3BE4AA172620F28400186150 /* MST.swift in Sources */,
 				3B6021A525F8211600DC019C /* Recursion.swift in Sources */,
 				3BF4F61A260A9DCC0088E399 /* bipartite.swift in Sources */,
 				3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */,
@@ -316,6 +335,7 @@
 				3B4E157425FC114E008BAFF0 /* Sorting.swift in Sources */,
 				3BF4F62E260BE8A10088E399 /* Town.swift in Sources */,
 				3B79D2FB25F9819000A5C50C /* Leetcode01.swift in Sources */,
+				3BE4AA0E261F883400186150 /* SushiIterative.swift in Sources */,
 				3BF4F6A2261909E60088E399 /* Bridges.swift in Sources */,
 				3BF4F617260A94F70088E399 /* BFS.swift in Sources */,
 			);

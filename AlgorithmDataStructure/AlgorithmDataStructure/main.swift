@@ -31,7 +31,7 @@ import Foundation
 //diameterForTreeQuize()
 //BMSerch()
 //lowestCommonAncestor()
-var uf = UF(12)
+//var uf = UF(12)
 //uf.union(4, 5)
 //let parents = uf.find(3)
 //print(parents)
@@ -44,6 +44,10 @@ var uf = UF(12)
 //sushiSolution()
 //courseSchedule()
 //courseScheduleSecond()
+//twoCityScheduling()
+//taskScheduler()
+//gasStation()
+partitionLabels()
 
 
 
