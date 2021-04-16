@@ -47,9 +47,8 @@ import Foundation
 //twoCityScheduling()
 //taskScheduler()
 //gasStation()
-partitionLabels()
-
-
+//partitionLabels()
+runBellmanFord()
 
 
 

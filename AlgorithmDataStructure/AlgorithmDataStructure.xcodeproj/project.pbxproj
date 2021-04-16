@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B01928126263C8A0011B20B /* BellmanFord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01928026263C8A0011B20B /* BellmanFord.swift */; };
+		3B01928B26268A6E0011B20B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01928A26268A6E0011B20B /* main.swift */; };
 		3B4E157025FC0F46008BAFF0 /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E156F25FC0F46008BAFF0 /* Searching.swift */; };
 		3B4E157425FC114E008BAFF0 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E157325FC114E008BAFF0 /* Sorting.swift */; };
 		3B4E157725FC7338008BAFF0 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E157625FC7338008BAFF0 /* QuickSort.swift */; };
@@ -45,6 +47,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3B01928626268A6E0011B20B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		3B60219625F820C900DC019C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B01928026263C8A0011B20B /* BellmanFord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellmanFord.swift; sourceTree = "<group>"; };
+		3B01928826268A6E0011B20B /* MinimumCostFlow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MinimumCostFlow; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B01928A26268A6E0011B20B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3B4E156F25FC0F46008BAFF0 /* Searching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searching.swift; sourceTree = "<group>"; };
 		3B4E157325FC114E008BAFF0 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		3B4E157625FC7338008BAFF0 /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
@@ -97,6 +111,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B01928526268A6E0011B20B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B60219525F820C900DC019C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +128,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B01927F26263C630011B20B /* ShortestPath */ = {
+			isa = PBXGroup;
+			children = (
+				3B01928026263C8A0011B20B /* BellmanFord.swift */,
+			);
+			path = ShortestPath;
+			sourceTree = "<group>";
+		};
+		3B01928926268A6E0011B20B /* MinimumCostFlow */ = {
+			isa = PBXGroup;
+			children = (
+				3B01928A26268A6E0011B20B /* main.swift */,
+			);
+			path = MinimumCostFlow;
+			sourceTree = "<group>";
+		};
 		3B4E156E25FC0F1D008BAFF0 /* SearchingSorting */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3B60219A25F820C900DC019C /* AlgorithmDataStructure */,
+				3B01928926268A6E0011B20B /* MinimumCostFlow */,
 				3B60219925F820C900DC019C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				3B60219825F820C900DC019C /* AlgorithmDataStructure */,
+				3B01928826268A6E0011B20B /* MinimumCostFlow */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +181,7 @@
 				3B60219B25F820C900DC019C /* main.swift */,
 				3B6021A325F8210800DC019C /* Recursion */,
 				3B4E156E25FC0F1D008BAFF0 /* SearchingSorting */,
+				3B01927F26263C630011B20B /* ShortestPath */,
 				3BF4F5C8260163C10088E399 /* Tree */,
 			);
 			path = AlgorithmDataStructure;
@@ -249,6 +289,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B01928726268A6E0011B20B /* MinimumCostFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B01928C26268A6E0011B20B /* Build configuration list for PBXNativeTarget "MinimumCostFlow" */;
+			buildPhases = (
+				3B01928426268A6E0011B20B /* Sources */,
+				3B01928526268A6E0011B20B /* Frameworks */,
+				3B01928626268A6E0011B20B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinimumCostFlow;
+			productName = MinimumCostFlow;
+			productReference = 3B01928826268A6E0011B20B /* MinimumCostFlow */;
+			productType = "com.apple.product-type.tool";
+		};
 		3B60219725F820C900DC019C /* AlgorithmDataStructure */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B60219F25F820C900DC019C /* Build configuration list for PBXNativeTarget "AlgorithmDataStructure" */;
@@ -275,6 +332,9 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					3B01928726268A6E0011B20B = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					3B60219725F820C900DC019C = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -294,11 +354,20 @@
 			projectRoot = "";
 			targets = (
 				3B60219725F820C900DC019C /* AlgorithmDataStructure */,
+				3B01928726268A6E0011B20B /* MinimumCostFlow */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B01928426268A6E0011B20B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B01928B26268A6E0011B20B /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B60219425F820C900DC019C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +384,7 @@
 				3BF4F5EB2603FDD90088E399 /* IndexPriorityQueue.swift in Sources */,
 				3BE4AA172620F28400186150 /* MST.swift in Sources */,
 				3B6021A525F8211600DC019C /* Recursion.swift in Sources */,
+				3B01928126263C8A0011B20B /* BellmanFord.swift in Sources */,
 				3BF4F61A260A9DCC0088E399 /* bipartite.swift in Sources */,
 				3B79D2F325F9765B00A5C50C /* ExhaustiveSearch.swift in Sources */,
 				3BF4F6AE261D0D820088E399 /* TopologicalSort.swift in Sources */,
@@ -344,6 +414,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3B01928D26268A6E0011B20B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3B01928E26268A6E0011B20B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26YLUYGRBT;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		3B60219D25F820C900DC019C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +576,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B01928C26268A6E0011B20B /* Build configuration list for PBXNativeTarget "MinimumCostFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B01928D26268A6E0011B20B /* Debug */,
+				3B01928E26268A6E0011B20B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B60219325F820C900DC019C /* Build configuration list for PBXProject "AlgorithmDataStructure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
