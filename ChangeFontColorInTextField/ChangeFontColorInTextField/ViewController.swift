@@ -46,13 +46,26 @@ extension ViewController: UITextFieldDelegate {
 
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     if let text = textField.text {
-      if let range = text.lowercased().range(of: "red") {
-        let attribute = NSMutableAttributedString(string: text)
-        attribute.addAttribute(.foregroundColor, value: UIColor.red, range: NSRange(range, in: text))
-        textField.attributedText = attribute
+      var rangeList: [NSRange] = []
+      self.redToOther(text, &rangeList)
+      let attribute = NSMutableAttributedString(string: text)
+      for nsRange in rangeList {
+        attribute.addAttribute(.foregroundColor, value: UIColor.red, range:nsRange)
       }
+      textField.attributedText = attribute
       return true
     }
     return false
+  }
+
+  func redToOther(_ text: String, _ rangeList: inout [NSRange]) {
+    if !text.contains("red") {
+      return
+    }
+    let range = text.range(of: "red")!
+    rangeList.append(NSRange(range, in: text))
+    var word = text
+    word.replaceSubrange(range, with: "000")
+    self.redToOther(word, &rangeList)
   }
 }
