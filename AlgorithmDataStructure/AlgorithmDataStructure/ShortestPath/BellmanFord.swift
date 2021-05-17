@@ -62,15 +62,13 @@ func shortestPath() {
     let q = Queue<Int>()
     q.enqueue(item: src)
     dist[src] = 0
-    check[src] = 0
+    check[src] = false
 
     while !q.isEmpty() {
       let from = q.dequeue()!
       check[from] = false
-      for edge in adj[from] {
-        
-      }
     }
+    return []
   }
 }
 

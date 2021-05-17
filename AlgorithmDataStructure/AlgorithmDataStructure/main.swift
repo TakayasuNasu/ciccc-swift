@@ -48,7 +48,11 @@ import Foundation
 //taskScheduler()
 //gasStation()
 //partitionLabels()
-runBellmanFord()
+//runBellmanFord()
+//MakeOne()
+//ClimbingStairs()
+//MaxSubArray()
+CombinationSum()
 
 
 
